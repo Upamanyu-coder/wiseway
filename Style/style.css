@@ -36,7 +36,7 @@
   }
   
   .container {
-    width: 92%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -48,7 +48,7 @@
   .topbar-left,
   .topbar-right {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -56,6 +56,7 @@
   
   .topbar-left a,
   .topbar-right a {
+    font: 1.3rem sans-serif;
     text-decoration: none;
     color: white;
     display: flex;
@@ -70,9 +71,38 @@
   }
   
   .topbar i {
-    font-size: 1rem;
+    font-size: 1.7rem;
+    margin-right: 10px;
   }
 
+  /* ========== Mobile Menu Button ========== */
+  /* Hide menu button on desktop */
+  @media (max-width: 769px) {
+    .topbar a {
+      font-size: 1.1rem;
+    }
+
+    .topbar-left {
+      margin-left: 20px;
+    }
+
+    .topbar-right{
+      gap: 1.5rem;
+    }
+    
+    .topbar-right a{
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .topbar-right i {
+      align-items: center;
+      font-size: 1.2rem;
+      margin-left: 50px;
+     
+    }
+  }
+ 
   
   /* ========== Navbar ========== */
   #navbar {
@@ -108,7 +138,7 @@
     align-items: center;
     gap: 0.5rem;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--text);
   }
   
@@ -207,16 +237,21 @@
 
   
     #mobile-menu-btn {
-      display: fixed;
+      /* display: fixed;  */
       font-size: 2rem;
       background: none;
       border: none;
       cursor: pointer;
       color: var(--space, #000);
-      position: fixed;
+      /* position: fixed; */
       top: 5rem;
       right: 1rem;
       z-index: 10001;
+    }
+
+    #nav-menu.scrolled {
+      /* position: fixed; */
+      top: 0%;
     }
   
     /* Off-canvas nav menu */
@@ -297,6 +332,8 @@
       text-align: left;
       width: 100%;
     }
+
+    
   
   }
 
@@ -334,6 +371,7 @@
 
   .hero-content h4 {
     font-size: 1.2rem;
+    text-align: justify;
     font-weight: bold;
     color: #000000;
     margin-bottom: 1rem;
@@ -358,6 +396,7 @@
    */
 
   .hero-content p {
+    text-align: justify;
     font-size: 1.1rem;
     margin-bottom: 3rem;
     color: #333;
@@ -539,7 +578,9 @@
     }
   
     .student-img {
-      width: 150px;
+      width: 350px;
+      top: 82%;
+      left: 20%;
     }
   
     .orbit-red {
@@ -548,9 +589,25 @@
     }
   
     .orbit-blue {
-      width: 320px;
-      height: 320px;
+      width: 300px;
+      height: 300px;
     }
+
+    .orbit-blue2{
+      width: 200px;
+      height: 200px;
+    }
+
+    .box1{
+      top: 20%;
+      left: 40%;
+    }
+
+    .box2{
+      top: 35%;
+    right: -50%;
+    }
+  
   }
   
 /* ========== Welcome ========== */
