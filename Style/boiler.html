@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wishway International Consultancy</title>
+    <link rel="stylesheet" href="./Style/boiler.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    
+</head>
+<body>
+      <!-- 🔹 Topbar Section -->
+  <div class="topbar">
+    <div class="container">
+      <ul class="topbar-left">
+        <li><a href="mailto:info@wiseway.edu.np"> <i class="ri-mail-fill"></i> info@wiseway.edu.np</a></li>
+        <li><a href="tel:+977-071-592369"><i class="ri-phone-fill">  </i> 071-592369</a></li> //
+        <li><a href="tel:+977-9709145722"> +977-9709145722</a></li>
+      </ul>
+      <ul class="topbar-right">
+        <li> <a href="https://wa.me/9779709145722" target="_blank"><i class="ri-whatsapp-fill"></i></a></li>
+        <li><a href="https://www.facebook.com/wisewayinternational" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="https://www.instagram.com/wisewayinternational/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+        <li><a href="https://www.tiktok.com/@wisewayinternational?fbclid=IwY2xjawKqqB9leHRuA2FlbQIxMABicmlkETFkcXdsaHVBMFdUQ1hrUHlCAR4bIBY0uS9ETPUMrcXH1cfaOpao84iRnRd1zV98EsOQOca0EmLi6vFwTb-_dw_aem_J3b7CN1GI81c-m6I7wCABg" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+      </ul>
+    </div>
+  </div>
+      
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="https://wiseway.edu.np/" class="logo-text">
+                <img src="./image/logo.png" width="30" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <span>Wishway International</span>
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <div class="dropdown">
+                    <button>Study Abroad</button>
+                        <div class="dropdown-content">
+                            <a href="./study_details/australia.html">🇦🇺 Study In Australia</a>
+                            <a href="./study_details/uk.html">🇬🇧 Study In UK</a>
+                            <a href="./study_details/ireland.html">🇮🇪 Study In Ireland</a>
+                            <a href="./study_details/canada.html">🇨🇦 Study In Canada</a>
+                            <a href="./study_details/usa.html">🇺🇸 Study In USA</a>
+                            <a href="./study_details/newzealand.html">🇳🇿 Study In New Zealand</a>
+                        </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>About</button>
+                    <div class="dropdown-content">
+                        <a href="service.branding.html">About Wishway</a>
+                        <a href="service.webdevelopment.html">Why Choose Us</a>
+                        <a href="service.marketing.html">Message From MD</a>
+                        <a href="service.consulting.html">Team Wishway</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>Test Preparation</button>
+                    <div class="dropdown-content">
+                        <a href="solutions.web-maintenance.html">IELTS Test</a>
+                        <a href="solutions.Domain-Registration.html">PTE Test</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>Resources</button>
+                    <div class="dropdown-content">
+                        <a href="solutions.web-maintenance.html">Interview Guidelines</a>
+                        <a href="solutions.Domain-Registration.html">SOP For Australia</a>
+                        <a href="solutions.Domain-Registration.html">SOP For UK</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>University</button>
+                    <div class="dropdown-content">
+                        <a href="./study_details/australia.html">🇦🇺 Australia</a>
+                        <a href="./study_details/uk.html">🇬🇧  UK</a>
+                        <a href="./study_details/ireland.html">🇮🇪 Ireland</a>
+                        <a href="./study_details/canada.html">🇨🇦 Canada</a>
+                        <a href="./study_details/usa.html">🇺🇸  USA</a>
+                        <a href="./study_details/newzealand.html">🇳🇿  New Zealand</a>
+                    </div>
+                </div>
+
+                <a href="contact.html"><button>Contact US </button></a>
+          
+            <button id="mobile-menu-btn">☰</button>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Message Button -->
+
+<button id="messageBtn" class="message-btn">
+    <i class="fas fa-comment-alt"></i>
+  </button>
+  
+  <!-- Appointment Form Modal -->
+   
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Book Appointment</h2>
+      <form id="appointmentForm">
+        <label for="fullName">Full Name <span class="span">*</span> </label>
+        <input type="text" id="fullName" name="fullName" required />
+  
+        <label for="email">Email <span class="span">*</span>  </label>
+        <input type="email" id="email" name="email" required />
+  
+        <label for="phone">Phone No. <span class="span">*</span>  </label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{7,15}" placeholder="Digits only with country code" />
+  
+        <label for="address">Address <span class="span">*</span>  </label>
+        <textarea id="address" name="address" rows="2" required placeholder="Country, State, District, Municipality, Ward No and Street Name too "></textarea>
+  
+        <label for="appointmentType">Appointment Type <span class="span">*</span>  </label>
+        <select id="appointmentType" name="appointmentType" required>
+          <option value="" disabled selected>Select type</option>
+          <option value="Digital Meet">Digital Meet</option>
+          <option value="Physical Meet">Physical Meet</option>
+        </select>
+  
+        <label for="appointmentTime">Appointment Time <span class="span">*</span>  </label>
+        <input type="datetime-local" id="appointmentTime" name="appointmentTime" required />
+  
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- // Footer Section // -->
+     
+  <footer class="footer">
+    <div class="container footer-container">
+      <!-- Newsletter -->
+
+      <div class="footer-newsletter">
+        <div class="logo">
+            <h3> <a href="https://wiseway.edu.np/" class="logo-text">
+            <img src="./image/logo.png" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        Wishway International</h3> </a> </div>
+        <p>A trusted partner guiding students through study abroad journeys with expert advice, personalized support, and strong university connections worldwide. We make your global education dreams a reality!</p>
+      </div>
+  
+  
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">SOP</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Interview Questions</a></li>
+          <li><a href="#">Study Abroad</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+       
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p><strong>Phone:</strong> 071-592369 // +977-9709145722 </p>
+        <p><strong>Email:</strong> <a href="mailto:info@wiseway.edu.np">info@wiseway.edu.np</a></p>
+        <p><strong>Address:</strong> Butwal 11, Rupandehi, Lumbini, Nepal</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© Wiseway International. All rights reserved. | Powered By <a href="https://www.jvstudio.com.np/">J.V. Studio</a></p>
+      <p>Crafted with ❤️ by <a href="https://yubrazdhakal.com.np/"> Yubraj Dhakal Upamanyu </a></p>
+    </div>
+  </footer>
+  
+
+<!-- JavaScript -->
+<script src="./script/boiler.js"></script>
+
+<!-- Back to Top Button -->
+
+<button id="backToTopBtn" title="Back to Top">🛫</button>
+</body>
+</html>

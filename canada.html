@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wiseway International Consultancy</title>
+    <link rel="stylesheet" href="./Style/study.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    
+</head>
+<body>
+      <!-- 🔹 Topbar Section -->
+  <div class="topbar">
+    <div class="container">
+      <ul class="topbar-left">
+        <li><a href="mailto:info@wiseway.edu.np"> <i class="ri-mail-fill"></i> info@wiseway.edu.np</a></li>
+        <li><a href="tel:+977-071-592369"><i class="ri-phone-fill">  </i> 071-592369</a></li> //
+        <li><a href="tel:+977-9709145722"> +977-9709145722</a></li>
+      </ul>
+      <ul class="topbar-right">
+        <li> <a href="https://wa.me/9779709145722" target="_blank"><i class="ri-whatsapp-fill"></i></a></li>
+        <li><a href="https://www.facebook.com/wisewayinternational" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="https://www.instagram.com/wisewayinternational/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+        <li><a href="https://www.tiktok.com/@wisewayinternational?fbclid=IwY2xjawKqqB9leHRuA2FlbQIxMABicmlkETFkcXdsaHVBMFdUQ1hrUHlCAR4bIBY0uS9ETPUMrcXH1cfaOpao84iRnRd1zV98EsOQOca0EmLi6vFwTb-_dw_aem_J3b7CN1GI81c-m6I7wCABg" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+      </ul>
+    </div>
+  </div>
+      
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="https://wiseway.edu.np/" class="logo-text">
+                <img src="./image/logo.png" width="30" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <span>Wiseway International</span>
+                </a>
+            </div>
+
+            <div class="nav-links">
+              <a href="index.html"><button>Home</button></a>
+
+                <div class="nav-links">
+                <div class="dropdown">
+                    <button>Study Abroad</button>
+                        <div class="dropdown-content">
+                            <a href="./australia.html">🇦🇺 Study In Australia</a>
+                            <a href="./uk.html">🇬🇧 Study In UK</a>
+                            <a href="./ireland.html">🇮🇪 Study In Ireland</a>
+                            <a href="./canada.html">🇨🇦 Study In Canada</a>
+                            <a href="./usa.html">🇺🇸 Study In USA</a>
+                            <a href="./newzealand.html">🇳🇿 Study In New Zealand</a>
+                        </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>About</button>
+                    <div class="dropdown-content">
+                        <a href="about.wiseway.html">About Wiseway</a>
+                        <a href="about.choose-us.html">Why Choose Us</a>
+                        <a href="about.md.html">Message From MD</a>
+                        <a href="about.team.html">Team Wiseway</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>Test Preparation</button>
+                    <div class="dropdown-content">
+                        <a href="ielts.html">IELTS Test</a>
+                        <a href="pte.html">PTE Test</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>Resources</button>
+                    <div class="dropdown-content">
+                        <a href="guidelines.html">Interview Guidelines</a>
+                        <a href="sop.aud.html">SOP For Australia</a>
+                        <a href="sop.uk.html">SOP For UK</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>University</button>
+                    <div class="dropdown-content">
+                        <a href="./university.australia.html">🇦🇺 Australia</a>
+                        <a href="./university.uk.html">🇬🇧  UK</a>
+                        <a href="./university.ireland.html">🇮🇪 Ireland</a>
+                        <a href="./university.canada.html">🇨🇦 Canada</a>
+                        <a href="./university.usa.html">🇺🇸  USA</a>
+                        <a href="./university.newzealand.html">🇳🇿  New Zealand</a>
+                    </div>
+                </div>
+
+                <a href="contact.html"><button>Contact US </button></a>
+          
+            <button id="mobile-menu-btn">☰</button>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Message Button -->
+
+<button id="messageBtn" class="message-btn">
+    <i class="fas fa-comment-alt"></i>
+  </button>
+  
+  <!-- Appointment Form Modal -->
+   
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Book Appointment</h2>
+      <form id="appointmentForm">
+        <label for="fullName">Full Name <span class="span">*</span> </label>
+        <input type="text" id="fullName" name="fullName" required />
+  
+        <label for="email">Email <span class="span">*</span>  </label>
+        <input type="email" id="email" name="email" required />
+  
+        <label for="phone">Phone No. <span class="span">*</span>  </label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{7,15}" placeholder="Digits only with country code" />
+  
+        <label for="address">Address <span class="span">*</span>  </label>
+        <textarea id="address" name="address" rows="2" required placeholder="Country, State, District, Municipality, Ward No and Street Name too "></textarea>
+  
+        <label for="appointmentType">Appointment Type <span class="span">*</span>  </label>
+        <select id="appointmentType" name="appointmentType" required>
+          <option value="" disabled selected>Select type</option>
+          <option value="Digital Meet">Digital Meet</option>
+          <option value="Physical Meet">Physical Meet</option>
+        </select>
+  
+        <label for="appointmentTime">Appointment Time <span class="span">*</span>  </label>
+        <input type="datetime-local" id="appointmentTime" name="appointmentTime" required />
+  
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+  <section class="hero">
+
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+
+
+    <h1>Study in Canada</h1>
+    <p class="breadcrumb"> Where - <span> Education Meets Opportunity.</span></p>
+  </section>
+
+  <div class="why-section">
+    <div class="why-wrapper"> <!-- This is the flex or grid container -->
+
+        <!-- Left Side -->
+    <div class="why-container">
+            <div class="why-content">
+              <div class="why-image">
+                <img src="https://assets.live.dxp.maginfrastructure.com/f/73114/1375x920/a8468bc87c/ema-destination-dublin.png" alt="Australia" class="why-img">
+              </div> 
+                <h2 class="why-title">Oleev – Study in Canada</h2>
+
+                                <p class="why-paragraph">
+                                    <strong>Invest in Excellence. Live the Experience.</strong>
+                                    A Canadian degree is as widely recognized and respected as those from any other leading education destination. In fact, 12 Canadian universities are ranked among the top 200 universities globally, reflecting the country’s commitment to academic excellence.
+                                </p>
+                                
+                            <p class="why-paragraph">
+                                Canada offers a world-class education at a more affordable cost compared to many other countries, making it an ideal destination for students seeking high-quality education with excellent value. If you're looking to broaden your horizons and immerse yourself in a unique cultural and academic experience, Canada is the place to be.
+                            </p>
+                            
+                            <p class="why-paragraph">
+                                Each year, over 200,000 international students choose Canada for their studies. Once in Canada, students quickly realize that it represents a solid return on educational investment, combining top-tier education with an exceptional quality of life. According to the United Nations, Canada consistently ranks as one of the best countries in the world to live in. Remarkably, Canada also graduates more doctorates annually than many other nations, underlining its academic rigor and global contribution to research and innovation.
+                            </p>
+        
+                            <p class="why-paragraph">
+                                Beyond academics, Canada is celebrated for being one of the most welcoming, friendly, and inclusive nations in the world. As a Commonwealth country with a richly diverse population, Canada embraces international students with genuine warmth and hospitality. Despite its cold climate, students often describe the cultural atmosphere as warm and inviting, making it easier to adapt and thrive.
+                            </p>
+        
+                            <p class="why-paragraph">
+                                With its low population density, students enjoy a peaceful, safe, and community-oriented lifestyle. Choosing to study in Canada means not only gaining a highly respected degree, but also experiencing a rich cultural journey in a country that values education, innovation, and inclusivity.
+                            
+                            </p>
+            </div>
+      </div>
+  
+      <!-- Right Side: First-->
+      <div class="why-animation">
+        <div class="card">
+            <h3>Why Choose Canada?</h3>
+            <p>
+                <ul>
+                    <li>Internationally respected degrees and diplomas that open global career doors</li>
+                    <li>An inclusive academic culture that celebrates diversity and global perspectives</li>
+                    <li>Beautiful, historic universities blended with cutting-edge technology and innovation</li>
+                    <li>Accelerated programs that save time and reduce tuition and living costs</li>
+                    <li>Strong post-study work options and immigration-friendly policies for international graduates</li>
+                    <li>An enriching lifestyle with festivals, nature, and culture in a safe and modern society</li>
+                  </ul>
+                  
+            </p>
+          </div>
+
+        <!-- Right Side: Second -->
+        <div class="why-animation">
+            <div class="card">
+                <h3> <u>Study Abroad</u></h3>
+                <div class="bton">
+                  <a href="./uk.html">🇬🇧   Study In UK</a> 
+                </div>
+
+                  <div class="bton">
+                    <a href="./australia.html">🇦🇺 Study In Australia</a>
+                  </div>
+                  
+              <div class="bton">
+                <a href="./ireland.html">🇮🇪 Study In Ireland</a>
+                  </div>
+
+              <div class="bton">
+                  <a href="./usa.html">🇺🇸   Study In USA</a>
+                  </div>
+
+              <div class="bton">
+                  <a href="./newzealand.html">🇳🇿   Study In New Zealand</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Third -->
+        <div class="why-animation">
+          <div class="card">
+            <div class="image-container">
+              <a href="./ielts.html">
+              <img src="https://mymavenedu.com/wp-content/uploads/2021/05/ielts_promo.jpg" alt="Ielts Class" class="why-imge">
+              <div class="hover-message">IELTS Preparation Classes</div>  
+            </a>
+            </div>
+          </div>
+          </div>
+
+            <div class="why-animation">
+          <div class="card">
+            <div class="image-container">
+            <a href="./pte.html">
+              <img src="https://www.english.com/blog/wp-content/uploads/2020/07/studying-3.jpg" alt="PTE Class" class="why-imge">
+              <div class="hover-message">PTE Preparation Classes</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+  </section>
+  
+
+
+  <!-- // Footer Section // -->
+     
+  <footer class="footer">
+    <div class="container footer-container">
+      <!-- Newsletter -->
+
+      <div class="footer-newsletter">
+        <div class="logo">
+            <h3> <a href="https://wiseway.edu.np/" class="logo-text">
+            <img src="./image/logo.png" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        Wiseway International</h3> </a> </div>
+        <p>A trusted partner guiding students through study abroad journeys with expert advice, personalized support, and strong university connections worldwide. We make your global education dreams a reality!</p>
+      </div>
+  
+  
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">SOP</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Interview Questions</a></li>
+          <li><a href="#">Study Abroad</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+       
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p><strong>Phone:</strong> 071-592369 // +977-9709145722 </p>
+        <p><strong>Email:</strong> <a href="mailto:info@wiseway.edu.np">info@wiseway.edu.np</a></p>
+        <p><strong>Address:</strong> Butwal 11, Rupandehi, Lumbini, Nepal</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© Wiseway International. All rights reserved. | Powered By <a href="https://www.jvstudio.com.np/">J.V. Studio</a></p>
+      <p>Crafted with ❤️ by <a href="https://yubrazdhakal.com.np/"> Yubraj Dhakal Upamanyu </a></p>
+    </div>
+  </footer>
+  
+
+<!-- JavaScript -->
+<script src="./script/index.js"></script>
+
+<!-- Back to Top Button -->
+
+<button id="backToTopBtn" title="Back to Top">🛫</button>
+</body>
+</html>

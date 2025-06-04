@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wiseway International Consultancy</title>
+    <link rel="stylesheet" href="./Style/study.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    
+</head>
+<body>
+      <!-- 🔹 Topbar Section -->
+  <div class="topbar">
+    <div class="container">
+      <ul class="topbar-left">
+        <li><a href="mailto:info@wiseway.edu.np"> <i class="ri-mail-fill"></i> info@wiseway.edu.np</a></li>
+        <li><a href="tel:+977-071-592369"><i class="ri-phone-fill">  </i> 071-592369</a></li> //
+        <li><a href="tel:+977-9709145722"> +977-9709145722</a></li>
+      </ul>
+      <ul class="topbar-right">
+        <li> <a href="https://wa.me/9779709145722" target="_blank"><i class="ri-whatsapp-fill"></i></a></li>
+        <li><a href="https://www.facebook.com/wisewayinternational" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="https://www.instagram.com/wisewayinternational/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+        <li><a href="https://www.tiktok.com/@wisewayinternational?fbclid=IwY2xjawKqqB9leHRuA2FlbQIxMABicmlkETFkcXdsaHVBMFdUQ1hrUHlCAR4bIBY0uS9ETPUMrcXH1cfaOpao84iRnRd1zV98EsOQOca0EmLi6vFwTb-_dw_aem_J3b7CN1GI81c-m6I7wCABg" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+      </ul>
+    </div>
+  </div>
+      
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="https://wiseway.edu.np/" class="logo-text">
+                <img src="./image/logo.png" width="30" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <span>Wiseway International</span>
+                </a>
+            </div>
+
+            <div class="nav-links">
+              <a href="index.html"><button>Home</button></a>
+
+            <div class="nav-links">
+              <div class="dropdown">
+                  <button>Study Abroad</button>
+                      <div class="dropdown-content">
+                          <a href="./australia.html">🇦🇺 Study In Australia</a>
+                          <a href="./uk.html">🇬🇧 Study In UK</a>
+                          <a href="./ireland.html">🇮🇪 Study In Ireland</a>
+                          <a href="./canada.html">🇨🇦 Study In Canada</a>
+                          <a href="./usa.html">🇺🇸 Study In USA</a>
+                          <a href="./newzealand.html">🇳🇿 Study In New Zealand</a>
+                      </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>About</button>
+                  <div class="dropdown-content">
+                      <a href="about.wiseway.html">About Wiseway</a>
+                      <a href="about.choose-us.html">Why Choose Us</a>
+                      <a href="about.md.html">Message From MD</a>
+                      <a href="about.team.html">Team Wiseway</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>Test Preparation</button>
+                  <div class="dropdown-content">
+                      <a href="ielts.html">IELTS Test</a>
+                      <a href="pte.html">PTE Test</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>Resources</button>
+                  <div class="dropdown-content">
+                      <a href="guidelines.html">Interview Guidelines</a>
+                      <a href="sop.aud.html">SOP For Australia</a>
+                      <a href="sop.uk.html">SOP For UK</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>University</button>
+                  <div class="dropdown-content">
+                      <a href="./university.australia.html">🇦🇺 Australia</a>
+                      <a href="./university.uk.html">🇬🇧  UK</a>
+                      <a href="./university.ireland.html">🇮🇪 Ireland</a>
+                      <a href="./university.canada.html">🇨🇦 Canada</a>
+                      <a href="./university.usa.html">🇺🇸  USA</a>
+                      <a href="./university.newzealand.html">🇳🇿  New Zealand</a>
+                  </div>
+              </div>
+
+                <a href="contact.html"><button>Contact US </button></a>
+          
+            <button id="mobile-menu-btn">☰</button>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Message Button -->
+
+<button id="messageBtn" class="message-btn">
+    <i class="fas fa-comment-alt"></i>
+  </button>
+  
+  <!-- Appointment Form Modal -->
+   
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Book Appointment</h2>
+      <form id="appointmentForm">
+        <label for="fullName">Full Name <span class="span">*</span> </label>
+        <input type="text" id="fullName" name="fullName" required />
+  
+        <label for="email">Email <span class="span">*</span>  </label>
+        <input type="email" id="email" name="email" required />
+  
+        <label for="phone">Phone No. <span class="span">*</span>  </label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{7,15}" placeholder="Digits only with country code" />
+  
+        <label for="address">Address <span class="span">*</span>  </label>
+        <textarea id="address" name="address" rows="2" required placeholder="Country, State, District, Municipality, Ward No and Street Name too "></textarea>
+  
+        <label for="appointmentType">Appointment Type <span class="span">*</span>  </label>
+        <select id="appointmentType" name="appointmentType" required>
+          <option value="" disabled selected>Select type</option>
+          <option value="Digital Meet">Digital Meet</option>
+          <option value="Physical Meet">Physical Meet</option>
+        </select>
+  
+        <label for="appointmentTime">Appointment Time <span class="span">*</span>  </label>
+        <input type="datetime-local" id="appointmentTime" name="appointmentTime" required />
+  
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+  <section class="hero">
+
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+
+
+    <h1>Study in New Zealand</h1>
+    <p class="breadcrumb"> Where - <span> Education Thrives in Harmony with Nature.</span></p>
+  </section>
+
+  <div class="why-section">
+    <div class="why-wrapper"> <!-- This is the flex or grid container -->
+
+        <!-- Left Side -->
+    <div class="why-container">
+            <div class="why-content">
+              <div class="why-image">
+                <img src="https://www.aatkings.com/media/s4mglm3l/auckland-city-banner.jpg" alt="Australia" class="why-img">
+              </div> 
+                <h2 class="why-title">Study in New Zealand</h2>
+
+                                <p class="why-paragraph">
+                                    New Zealand is increasingly recognized as one of the most desirable destinations for international education, offering a compelling blend of academic excellence, cultural diversity, and natural beauty. The country provides a world-class education system that awards internationally recognized degrees in an environment that fosters both personal growth and academic achievement.
+                                </p>
+                                
+                                <!-- <h4 class="why-titlee">Post-Study Opportunities and Career Growth</h4> -->
+
+                            <p class="why-paragraph">
+                                One of the hallmarks of New Zealand’s education system is its centrally regulated quality assurance framework, overseen by the New Zealand Qualifications Authority (NZQA). This national body ensures the integrity, credibility, and global recognition of qualifications awarded in New Zealand, providing students with confidence in the value and portability of their education.
+                            </p>
+
+                            <!-- <h4 class="why-titlee">Safe, Friendly, and Culturally Rich</h4> -->
+                            
+                            <p class="why-paragraph">
+                                The country boasts five universities ranked among the top 400 universities worldwide, underscoring its global standing in higher education. These institutions are supported by highly trained and experienced faculty members who prioritize individualized attention, ensuring that each student’s academic and personal development is nurtured. The New Zealand approach to learning emphasizes critical thinking, creativity, and independence, preparing students not just for jobs, but for leadership and innovation in their chosen fields.
+                            </p>
+        
+                            <h4 class="why-titlee">An Integrated and Student-Centered Approach</h4>
+                            <p class="why-paragraph">
+                                New Zealand’s education system takes a holistic and integrated approach, where classroom theory is often combined with practical application, real-world research, and project-based learning. The curriculum is designed to foster innovation and adaptability, qualities that are increasingly vital in a rapidly changing global landscape. Students are encouraged to explore ideas independently and to collaborate across disciplines, equipping them with the skills to thrive in any professional environment.
+                            </p>
+
+                            <h4 class="why-titlee">A Naturally Beautiful and Sustainable Environment</h4>
+                            <p class="why-paragraph">
+                                Set against a backdrop of stunning landscapes, including mountains, forests, beaches, and lakes, New Zealand provides a tranquil and inspiring setting for academic pursuits. The country is deeply committed to sustainability and environmental preservation, ensuring that its natural treasures are protected for future generations. This harmony between education and environment creates a unique learning experience that few other destinations can offer.
+                            </p>
+
+                            <h4 class="why-titlee">A Safe, Welcoming, and Culturally Inclusive Society</h4>
+                            <p class="why-paragraph">
+                                Beyond academics, New Zealand is known for its peaceful society, low crime rates, and high standard of living. It is consistently ranked as one of the safest countries in the world, making it an ideal environment for international students.
+                            </p>
+        
+                            <p class="why-paragraph">
+                                New Zealanders—often referred to as “Kiwis”—are globally admired for their hospitality, warmth, and openness. International students are welcomed with genuine friendliness and quickly feel at home in a community that celebrates diversity. Cultural inclusivity is deeply embedded in the country’s values, and students from all backgrounds are treated with respect and dignity. Whether in academic institutions, homestays, or local communities, students will find an atmosphere that promotes mutual understanding and cross-cultural exchange.
+                            </p>
+            </div>
+      </div>
+  
+      <!-- Right Side: First-->
+      <div class="why-animation">
+        <div class="card">
+            <h3>Why Choose New Zealand?</h3>
+            <p>
+                <ul>
+                  <li>Globally recognized degrees from top-ranked universities</li>
+                  <li>An education system built on innovation, flexibility, and quality assurance (NZQA)</li>
+                  <li>A safe and peaceful society with a strong commitment to sustainability</li>
+                  <li>Personal attention and support for every student’s academic journey</li>
+                  <li>Rich cultural diversity and a respectful, inclusive learning environment</li>
+                  <li>A lifestyle that balances academic rigor with natural beauty and well-being</li>
+                </ul>
+            </p>
+          </div>
+
+        <!-- Right Side: Second -->
+        <div class="why-animation">
+            <div class="card">
+                <h3> <u>Study Abroad</u></h3>
+                <div class="bton">
+                  <a href="./uk.html">🇬🇧   Study In UK</a> 
+                </div>
+
+                  <div class="bton">
+                    <a href="./australia.html">🇦🇺 Study In Australia</a>
+                  </div>
+                  
+              <div class="bton">
+                  <a href="./canada.html">🇨🇦   Study In Canada</a>
+                  </div>
+
+              <div class="bton">
+                  <a href="./usa.html">🇺🇸   Study In USA</a>
+                  </div>
+
+              <div class="bton">
+                    <a href="./ireland.html">🇮🇪 Study In Ireland</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Third -->
+        <div class="why-animation">
+          <div class="card">
+            <div class="image-container">
+              <a href="./ielts.html">
+              <img src="https://mymavenedu.com/wp-content/uploads/2021/05/ielts_promo.jpg" alt="Ielts Class" class="why-imge">
+              <div class="hover-message">IELTS Preparation Classes</div>  
+            </a>
+            </div>
+          </div>
+          </div>
+
+            <div class="why-animation">
+          <div class="card">
+            <div class="image-container">
+            <a href="./pte.html">
+              <img src="https://www.english.com/blog/wp-content/uploads/2020/07/studying-3.jpg" alt="PTE Class" class="why-imge">
+              <div class="hover-message">PTE Preparation Classes</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+  </section>
+  
+
+
+  <!-- // Footer Section // -->
+     
+  <footer class="footer">
+    <div class="container footer-container">
+      <!-- Newsletter -->
+
+      <div class="footer-newsletter">
+        <div class="logo">
+            <h3> <a href="https://wiseway.edu.np/" class="logo-text">
+            <img src="./image/logo.png" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        Wiseway International</h3> </a> </div>
+        <p>A trusted partner guiding students through study abroad journeys with expert advice, personalized support, and strong university connections worldwide. We make your global education dreams a reality!</p>
+      </div>
+  
+  
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">SOP</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Interview Questions</a></li>
+          <li><a href="#">Study Abroad</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+       
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p><strong>Phone:</strong> 071-592369 // +977-9709145722 </p>
+        <p><strong>Email:</strong> <a href="mailto:info@wiseway.edu.np">info@wiseway.edu.np</a></p>
+        <p><strong>Address:</strong> Butwal 11, Rupandehi, Lumbini, Nepal</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© Wiseway International. All rights reserved. | Powered By <a href="https://www.jvstudio.com.np/">J.V. Studio</a></p>
+      <p>Crafted with ❤️ by <a href="https://yubrazdhakal.com.np/"> Yubraj Dhakal Upamanyu </a></p>
+    </div>
+  </footer>
+  
+
+<!-- JavaScript -->
+<script src="./script/index.js"></script>
+
+<!-- Back to Top Button -->
+
+<button id="backToTopBtn" title="Back to Top">🛫</button>
+</body>
+</html>

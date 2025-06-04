@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wiseway International Consultancy</title>
+    <link rel="stylesheet" href="./Style/study.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    
+</head>
+<body>
+      <!-- 🔹 Topbar Section -->
+  <div class="topbar">
+    <div class="container">
+      <ul class="topbar-left">
+        <li><a href="mailto:info@wiseway.edu.np"> <i class="ri-mail-fill"></i> info@wiseway.edu.np</a></li>
+        <li><a href="tel:+977-071-592369"><i class="ri-phone-fill">  </i> 071-592369</a></li> //
+        <li><a href="tel:+977-9709145722"> +977-9709145722</a></li>
+      </ul>
+      <ul class="topbar-right">
+        <li> <a href="https://wa.me/9779709145722" target="_blank"><i class="ri-whatsapp-fill"></i></a></li>
+        <li><a href="https://www.facebook.com/wisewayinternational" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="https://www.instagram.com/wisewayinternational/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+        <li><a href="https://www.tiktok.com/@wisewayinternational?fbclid=IwY2xjawKqqB9leHRuA2FlbQIxMABicmlkETFkcXdsaHVBMFdUQ1hrUHlCAR4bIBY0uS9ETPUMrcXH1cfaOpao84iRnRd1zV98EsOQOca0EmLi6vFwTb-_dw_aem_J3b7CN1GI81c-m6I7wCABg" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+      </ul>
+    </div>
+  </div>
+      
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="https://wiseway.edu.np/" class="logo-text">
+                <img src="./image/logo.png" width="30" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <span>Wiseway International</span>
+                </a>
+            </div>
+
+            <div class="nav-links">
+              <a href="index.html"><button>Home</button></a>
+
+              <div class="nav-links">
+                <div class="dropdown">
+                    <button>Study Abroad</button>
+                        <div class="dropdown-content">
+                            <a href="./australia.html">🇦🇺 Study In Australia</a>
+                            <a href="./uk.html">🇬🇧 Study In UK</a>
+                            <a href="./ireland.html">🇮🇪 Study In Ireland</a>
+                            <a href="./canada.html">🇨🇦 Study In Canada</a>
+                            <a href="./usa.html">🇺🇸 Study In USA</a>
+                            <a href="./newzealand.html">🇳🇿 Study In New Zealand</a>
+                        </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>About</button>
+                    <div class="dropdown-content">
+                        <a href="about.wiseway.html">About Wiseway</a>
+                        <a href="about.choose-us.html">Why Choose Us</a>
+                        <a href="about.md.html">Message From MD</a>
+                        <a href="about.team.html">Team Wiseway</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>Test Preparation</button>
+                    <div class="dropdown-content">
+                        <a href="ielts.html">IELTS Test</a>
+                        <a href="pte.html">PTE Test</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>Resources</button>
+                    <div class="dropdown-content">
+                        <a href="guidelines.html">Interview Guidelines</a>
+                        <a href="sop.aud.html">SOP For Australia</a>
+                        <a href="sop.uk.html">SOP For UK</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button>University</button>
+                    <div class="dropdown-content">
+                        <a href="./university.australia.html">🇦🇺 Australia</a>
+                        <a href="./university.uk.html">🇬🇧  UK</a>
+                        <a href="./university.ireland.html">🇮🇪 Ireland</a>
+                        <a href="./university.canada.html">🇨🇦 Canada</a>
+                        <a href="./university.usa.html">🇺🇸  USA</a>
+                        <a href="./university.newzealand.html">🇳🇿  New Zealand</a>
+                    </div>
+                </div>
+
+                <a href="contact.html"><button>Contact US </button></a>
+          
+            <button id="mobile-menu-btn">☰</button>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Message Button -->
+
+<button id="messageBtn" class="message-btn">
+    <i class="fas fa-comment-alt"></i>
+  </button>
+  
+  <!-- Appointment Form Modal -->
+   
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Book Appointment</h2>
+      <form id="appointmentForm">
+        <label for="fullName">Full Name <span class="span">*</span> </label>
+        <input type="text" id="fullName" name="fullName" required />
+  
+        <label for="email">Email <span class="span">*</span>  </label>
+        <input type="email" id="email" name="email" required />
+  
+        <label for="phone">Phone No. <span class="span">*</span>  </label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{7,15}" placeholder="Digits only with country code" />
+  
+        <label for="address">Address <span class="span">*</span>  </label>
+        <textarea id="address" name="address" rows="2" required placeholder="Country, State, District, Municipality, Ward No and Street Name too "></textarea>
+  
+        <label for="appointmentType">Appointment Type <span class="span">*</span>  </label>
+        <select id="appointmentType" name="appointmentType" required>
+          <option value="" disabled selected>Select type</option>
+          <option value="Digital Meet">Digital Meet</option>
+          <option value="Physical Meet">Physical Meet</option>
+        </select>
+  
+        <label for="appointmentTime">Appointment Time <span class="span">*</span>  </label>
+        <input type="datetime-local" id="appointmentTime" name="appointmentTime" required />
+  
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+  <section class="hero">
+
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+
+
+    <h1>Study in United State Of America</h1>
+    <p class="breadcrumb"> Where - <span>  Innovation Meets Education.</span></p>
+  </section>
+
+  <div class="why-section">
+    <div class="why-wrapper"> <!-- This is the flex or grid container -->
+
+        <!-- Left Side -->
+    <div class="why-container">
+            <div class="why-content">
+              <div class="why-image">
+                <img src="https://t4.ftcdn.net/jpg/02/78/13/67/360_F_278136770_gtY679gEBnbKWhEjX40n7XmoMxcEt76P.jpg" alt="Australia" class="why-img">
+              </div> 
+                <h2 class="why-title">Study in the USA : Join a Global Community of Learners.</h2>
+
+                                <p class="why-paragraph">
+                                    
+                                    Studying and living in the United States is a transformative experience. It will not only broaden your academic horizons but also enrich your personal perspective, helping you grow into a more confident, open-minded, and globally aware individual. The United States is home to one of the world’s most advanced and prestigious university systems, offering top-tier academic programs across nearly every field of study.
+                                </p>
+                                
+                               
+                            <p class="why-paragraph">
+                                At the undergraduate level, students can explore a wide array of traditional and emerging disciplines, while graduate students benefit from close collaboration with world-renowned faculty and access to cutting-edge research opportunities. U.S. degrees are globally recognized for their academic excellence and professional value.
+                            </p>
+
+                            <p class="why-paragraph">
+                                One of the most compelling aspects of American education is its unwavering commitment to academic excellence. The most competitive institutions admit only the most talented students from around the world, providing them with a rigorous education delivered by highly qualified and experienced faculty. Degrees from U.S. institutions are not only widely recognized but also deeply respected worldwide.
+                            </p>
+
+                            <p class="why-paragraph">
+                                For students interested in academic research, the United States offers a uniquely supportive environment. Many graduate students, particularly those in MS or PhD programs, have the opportunity to earn while they learn. Research grants often cover tuition fees and provide a living stipend, allowing students to focus on their academic goals. These grants are typically funded by the U.S. government or leading global corporations, offering both academic and financial support.
+                            </p>
+
+                            <h4 class="why-titlee">The U.S. Education System</h4>
+                            <p class="why-paragraph">
+                               The education system in the United States differs significantly from many others around the world, offering unmatched flexibility and personalization. Students can tailor their studies to their interests by selecting from a broad range of elective courses. Many subjects are available multiple times throughout the academic year, allowing students to customize their schedules and complete their programs at their own pace.
+                            </p>
+
+                            <p class="why-paragraph">
+                                The semester or quarter system enables students to manage their academic progress flexibly. For instance, students may accelerate their studies and complete a master’s degree in one year, or extend their program to focus more deeply on research over two or more years. This adaptability allows for a more personalized and productive academic journey.
+                            </p>
+
+                            <h4 class="why-titlee">Scholarship Opportunities</h4>
+                            <p class="why-paragraph">
+                                Another major benefit of studying in the USA is the availability of financial aid. Many universities provide international students with scholarships, grants, and loans to help cover tuition and living expenses. Assistantships—awarded based on academic merit—can significantly reduce the cost of education and sometimes even make it entirely free for high-achieving students.
+                            </p>
+
+                            <p class="why-paragraph">
+                                Graduate students often gain valuable professional experience by serving as teaching assistants or research assistants, which helps fund their studies and enhances their skills in real-world settings. These roles not only support students financially but also offer hands-on experience that can be highly beneficial for future academic or professional pursuits.
+                            </p>
+
+                            <p class="why-paragraph">
+                                International students are considered valuable contributors to U.S. universities, bringing fresh perspectives, diverse experiences, and new ideas into classrooms, libraries, and laboratories. This practical and immersive approach to education fosters critical thinking and collaboration, preparing students for global careers in academia, research, and industry.
+                            </p>
+            </div>
+      </div>
+  
+      <!-- Right Side: First-->
+      <div class="why-animation">
+        <div class="card">
+            <h3>Why Choose the UK?</h3>
+            <p>
+                <ul>
+                    <li><strong>Globally Recognized Degrees:</strong> U.S. qualifications are respected worldwide for their academic excellence and professional value.</li>
+                    <li><strong>World-Class Universities:</strong> Home to many of the top-ranked institutions offering cutting-edge research and innovative programs.</li>
+                    <li><strong>Flexible Academic Structure:</strong> A customizable education system allowing students to tailor courses to their interests and pace.</li>
+                    <li><strong>Research and Career Opportunities:</strong> Access to state-of-the-art research facilities, internships, and professional networks.</li>
+                    <li><strong>Generous Financial Aid:</strong> Scholarships, grants, and assistantships available based on merit, helping to reduce overall education costs.</li>
+                    <li><strong>Diverse and Inclusive Environment:</strong> A multicultural society that welcomes students from all over the world and encourages global perspectives.</li>
+                  </ul>
+                  
+            </p>
+          </div>
+
+        <!-- Right Side: Second -->
+        <div class="why-animation">
+            <div class="card">
+                <h3> <u>Study Abroad</u></h3>
+                <div class="bton">
+                  <a href="./australia.html">🇦🇺 Study In Australia</a> 
+                </div>
+
+                  <div class="bton">
+                  <a href="./ireland.html">🇮🇪   Study In Ireland</a>
+                  </div>
+                  
+              <div class="bton">
+                  <a href="./canada.html">🇨🇦   Study In Canada</a>
+                  </div>
+
+              <div class="bton">
+                <a href="./uk.html">🇬🇧  Study In UK</a>
+                  </div>
+
+              <div class="bton">
+                  <a href="./newzealand.html">🇳🇿   Study In New Zealand</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Third -->
+        <div class="why-animation">
+          <div class="card">
+            <div class="image-container">
+              <a href="./ielts.html">
+              <img src="https://mymavenedu.com/wp-content/uploads/2021/05/ielts_promo.jpg" alt="Ielts Class" class="why-imge">
+              <div class="hover-message">IELTS Preparation Classes</div>  
+            </a>
+            </div>
+          </div>
+          </div>
+
+            <div class="why-animation">
+          <div class="card">
+            <div class="image-container">
+            <a href="./pte.html">
+              <img src="https://www.english.com/blog/wp-content/uploads/2020/07/studying-3.jpg" alt="PTE Class" class="why-imge">
+              <div class="hover-message">PTE Preparation Classes</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+  </section>
+  
+
+
+  <!-- // Footer Section // -->
+     
+  <footer class="footer">
+    <div class="container footer-container">
+      <!-- Newsletter -->
+
+      <div class="footer-newsletter">
+        <div class="logo">
+            <h3> <a href="https://wiseway.edu.np/" class="logo-text">
+            <img src="./image/logo.png" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        Wiseway International</h3> </a> </div>
+        <p>A trusted partner guiding students through study abroad journeys with expert advice, personalized support, and strong university connections worldwide. We make your global education dreams a reality!</p>
+      </div>
+  
+  
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">SOP</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Interview Questions</a></li>
+          <li><a href="#">Study Abroad</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+       
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p><strong>Phone:</strong> 071-592369 // +977-9709145722 </p>
+        <p><strong>Email:</strong> <a href="mailto:info@wiseway.edu.np">info@wiseway.edu.np</a></p>
+        <p><strong>Address:</strong> Butwal 11, Rupandehi, Lumbini, Nepal</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© Wiseway International. All rights reserved. | Powered By <a href="https://www.jvstudio.com.np/">J.V. Studio</a></p>
+      <p>Crafted with ❤️ by <a href="https://yubrazdhakal.com.np/"> Yubraj Dhakal Upamanyu </a></p>
+    </div>
+  </footer>
+  
+
+<!-- JavaScript -->
+<script src="./script/index.js"></script>
+
+<!-- Back to Top Button -->
+
+<button id="backToTopBtn" title="Back to Top">🛫</button>
+</body>
+</html>

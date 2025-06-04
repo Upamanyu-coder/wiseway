@@ -1,0 +1,605 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  :root {
+    --primary: #830202;
+    --secondary: #ff0015;
+    --space: #0A1128;
+    --accent-blue: #1565c0;
+    --accent-red: #d32f2f;
+    --text: #ffffff;
+    --hover-blue: #0d47a1;
+    --hover-red: #b71c1c;
+  }
+  
+  /* ========== Body ========== */
+  body {
+    background-image: url('photo/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text);
+    overflow-x: hidden;
+  }
+  
+
+ /* ========== Topbar Styling ========== */
+.topbar {
+    background-color: var(--accent-blue);
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .topbar-left,
+  .topbar-right {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .topbar-left a,
+  .topbar-right a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1 rem;
+    transition: color 0.3s ease;
+  }
+  
+  .topbar-left a:hover,
+  .topbar-right a:hover {
+    color: #ff0000;
+  }
+  
+  .topbar i {
+    font-size: 1rem;
+  }
+
+
+  /* ========== Mobile Navbar ========== */
+  
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100%;
+    background-color: #003366;
+    color: white;
+    z-index: 1000;
+    padding: 20px;
+    transition: right 0.4s ease-in-out;
+    overflow-y: auto;
+  }
+  
+  .nav-menu.open {
+    right: 0;
+  }
+  
+  .nav-menu .close-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    float: right;
+    cursor: pointer;
+  }
+  
+  /* Nav links */
+  .nav-links button,
+  .nav-links a {
+    display: block;
+    color: white;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .nav-links .dropdown-content {
+    display: none;
+    padding-left: 15px;
+  }
+  
+  .nav-links .dropdown.active .dropdown-content {
+    display: block;
+  }
+
+  /* ========== Navbar ========== */
+  #navbar {
+    position: fixed;
+    width: 100%;
+    top: 15;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: transparent;
+    z-index: 1000;
+    transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  }
+  
+  
+  .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navbar.scrolled {
+    position: fixed;
+    top: 0%;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--text);
+  }
+  
+  
+  .logo-text {
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  
+  /* ========== Nav Links ========== */
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .nav-links button {
+    background: none;
+    border: none;
+    color: var(--space);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: solid;
+    
+  }
+  
+  .nav-links button:hover {
+    color: var(--secondary);
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    background-color: var(--secondary) !important;
+    border-radius: 0.375rem;
+  }
+  
+  .cta-button:hover {
+    background-color: #d14050 !important;
+    color: var(--text) !important;
+  }
+  
+  /* ========== Dropdown Menu ========== */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--space);
+    min-width: 200px;
+    border-radius: 0.375rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--primary);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* ========== Mobile Menu Button ========== */
+  /* Hide menu button on desktop */
+  @media (min-width: 769px) {
+    #mobile-menu-btn {
+      display: none;
+    }
+  }
+
+
+  /*========== Message ========== */
+  /* Message button style */
+.message-btn {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    background-color: #ef4444; /* Tailwind Red */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulseGlow 1.5s infinite;
+    z-index: 1000;
+}
+
+.message-btn:hover {
+    background-color: #dc2626;
+    transform: scale(1.1);
+    animation: pulseGlow 1.5s infinite;
+    box-shadow: 0 0 15px 4px rgba(220, 38, 38, 0.6);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Keyframes for pulse glow */
+@keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 20px 6px rgba(220, 38, 38, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 30px 10px rgba(220, 38, 38, 0.9);
+    }
+    100% {
+      box-shadow: 0 0 20px 6px rgba(220, 38, 38, 0.7);
+    }
+  }
+  
+  
+
+  .modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1e293b; /* Dark gray */
+    text-align: center;
+  }
+
+  .model span {
+    color: #ef4444; /* Tailwind red-500 */
+  }
+  
+  .message-btn:hover {
+    background-color: var(--hover-blue);
+  }
+  
+  /* Modal background */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(30, 41, 59, 0.7); /* Dark transparent */
+    backdrop-filter: blur(3px);
+  }
+  
+  /* Modal content box */
+  .modal-content {
+    background-color: #fff;
+    margin: 8% auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 400px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ef4444;
+    cursor: pointer;
+  }
+  
+  /* Form styles */
+  form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form input[type="datetime-local"],
+  form textarea,
+  form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #334155;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form input[type="tel"]:focus,
+  form input[type="datetime-local"]:focus,
+  form textarea:focus,
+  form select:focus {
+    border-color: #ef4444;
+    outline: none;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #dc2626;
+  }
+  
+
+  * ========== Footer ========== */
+.footer {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 50px 40px 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  
+  .footer-newsletter {
+    flex: 1 1 300px;
+    min-width: 250px;
+  }
+  
+  .footer-newsletter h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ef4444; /* red */
+  }
+  
+  .footer-newsletter p {
+    margin-bottom: 20px;
+    color: #cbd5e1;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    max-width: 350px;
+  }
+  
+  .newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .newsletter-form button {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #dc2626;
+  }
+  
+  /* Footer Links Sections */
+  .footer-links {
+    flex: 1 1 150px;
+    min-width: 150px;
+  }
+  
+  .footer-links h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ef4444;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #ef4444;
+  }
+  
+  /* Contact Info Section */
+  .footer-contact {
+    flex: 1 1 250px;
+    min-width: 250px;
+  }
+  
+  .footer-contact h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ef4444;
+  }
+  
+  .footer-contact p {
+    margin-bottom: 10px;
+    color: #cbd5e1;
+  }
+  
+  .footer-contact a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-contact a:hover {
+    color: #ef4444;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+  }
+
+  .footer-bottom a:hover {
+    color: #ef4444;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+  
+    .footer-newsletter,
+    .footer-links,
+    .footer-contact {
+      min-width: auto;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+      border-radius: 4px;
+    }
+  
+    .newsletter-form button {
+      margin-top: 10px;
+    }
+  }
+
+
+  /* ========== Back to Top Button ========== */
+#backToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background-color: #ef4444; /* red */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #backToTopBtn:hover {
+    background-color: white;
+    color: #ef4444;
+    transform: translateY(-5px) rotate(-10deg);
+    box-shadow: 0 12px 24px rgba(239, 68, 68, 0.4);
+  }
+  
+  @keyframes flyUp {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-500px) rotate(-45deg);
+      opacity: 0;
+    }
+  }
+  
+  #backToTopBtn.fly {
+    animation: flyUp 0.8s forwards;
+  }
+  
