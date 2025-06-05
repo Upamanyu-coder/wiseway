@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wiseway International Consultancy</title>
+    <link rel="stylesheet" href="./Style/study.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    
+</head>
+<body>
+      <!-- 🔹 Topbar Section -->
+  <div class="topbar">
+    <div class="container">
+      <ul class="topbar-left">
+        <li><a href="mailto:info@wiseway.edu.np"> <i class="ri-mail-fill"></i> info@wiseway.edu.np</a></li>
+        <li><a href="tel:+977-071-592369"><i class="ri-phone-fill">  </i> 071-592369</a></li>
+        <!-- <li><a href="tel:+977-9709145722"> +977-9709145722</a></li> -->
+      </ul>
+      <ul class="topbar-right">
+        <li> <a href="https://wa.me/9779709145722" target="_blank"><i class="ri-whatsapp-fill"></i></a></li>
+        <li><a href="https://www.facebook.com/wisewayinternational" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="https://www.instagram.com/wisewayinternational/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+        <li><a href="https://www.tiktok.com/@wisewayinternational?fbclid=IwY2xjawKqqB9leHRuA2FlbQIxMABicmlkETFkcXdsaHVBMFdUQ1hrUHlCAR4bIBY0uS9ETPUMrcXH1cfaOpao84iRnRd1zV98EsOQOca0EmLi6vFwTb-_dw_aem_J3b7CN1GI81c-m6I7wCABg" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+      </ul>
+    </div>
+  </div>
+      
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="https://wiseway.edu.np/" class="logo-text">
+                <img src="./image/logo.png" width="30" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <span>Wiseway International</span>
+                </a>
+            </div>
+            <button id="mobile-menu-btn">☰</button>
+
+            <!-- Off-canvas Navigation Menu -->
+  <div class="nav-menu" id="navMenu">
+    <button class="close-btn" id="closeMenuBtn">✕</button>
+            
+            <div class="nav-links">
+              <a href="index.html"><button>Home</button></a>
+
+            <div class="nav-links">
+              <div class="dropdown">
+                  <button>Study Abroad</button>
+                       <div class="dropdown-content">
+                          <a href="./australia.html">🇦🇺 Study In Australia</a>
+                          <a href="./uk.html">🇬🇧 Study In UK</a>
+                          <a href="./france.html">🇫🇷 Study In France</a>
+                          <a href="./canada.html">🇨🇦 Study In Canada</a>
+                          <a href="./usa.html">🇺🇸 Study In USA</a>
+                          <a href="./newzealand.html">🇳🇿 Study In New Zealand</a>
+                          <a href="./greece.html">🇬🇷 Study In Greece</a>
+                        </div>
+      </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>About</button>
+                  <div class="dropdown-content">
+                      <a href="about.wiseway.html">About Wiseway</a>
+                      <a href="about.choose-us.html">Why Choose Us</a>
+                      <a href="about.md.html">Message From MD</a>
+                      <a href="about.team.html">Team Wiseway</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>Test Preparation</button>
+                  <div class="dropdown-content">
+                      <a href="ielts.html">IELTS Test</a>
+                      <a href="pte.html">PTE Test</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>Resources</button>
+                  <div class="dropdown-content">
+                      <a href="guidelines.html">Interview Guidelines</a>
+                      <a href="sop.aud.html">SOP For Australia</a>
+                      <a href="sop.uk.html">SOP For UK</a>
+                  </div>
+              </div>
+
+              <!-- <div class="dropdown">
+                  <button>University</button>
+                  <div class="dropdown-content">
+                      <a href="./university.australia.html">🇦🇺 Australia</a>
+                      <a href="./university.uk.html">🇬🇧  UK</a>
+                      <a href="./university.ireland.html">🇮🇪 Ireland</a>
+                      <a href="./university.canada.html">🇨🇦 Canada</a>
+                      <a href="./university.usa.html">🇺🇸  USA</a>
+                      <a href="./university.newzealand.html">🇳🇿  New Zealand</a>
+                  </div>
+              </div> -->
+
+                <a href="contact.html"><button>Contact US </button></a>
+          
+        </div>
+        </div>
+    </nav>
+
+    <!-- Message Button -->
+
+<button id="messageBtn" class="message-btn">
+    <i class="fas fa-comment-alt"></i>
+  </button>
+  
+  <!-- Appointment Form Modal -->
+   
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Book Appointment</h2>
+      <form id="appointmentForm">
+        <label for="fullName">Full Name <span class="span">*</span> </label>
+        <input type="text" id="fullName" name="fullName" required />
+  
+        <label for="email">Email <span class="span">*</span>  </label>
+        <input type="email" id="email" name="email" required />
+  
+        <label for="phone">Phone No. <span class="span">*</span>  </label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{7,15}" placeholder="Digits only with country code" />
+  
+        <label for="address">Address <span class="span">*</span>  </label>
+        <textarea id="address" name="address" rows="2" required placeholder="Country, State, District, Municipality, Ward No and Street Name too "></textarea>
+  
+        <label for="appointmentType">Appointment Type <span class="span">*</span>  </label>
+        <select id="appointmentType" name="appointmentType" required>
+          <option value="" disabled selected>Select type</option>
+          <option value="Digital Meet">Digital Meet</option>
+          <option value="Physical Meet">Physical Meet</option>
+        </select>
+  
+        <label for="appointmentTime">Appointment Time <span class="span">*</span>  </label>
+        <input type="datetime-local" id="appointmentTime" name="appointmentTime" required />
+  
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+  <section class="hero">
+
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+
+
+    <h1>Why Choose Wiseway International?</h1>
+    <p class="breadcrumb"> Because - <span> Your Dreams Deserve the Wisest Guidance.</span></p>
+  </section>
+
+  <div class="why-section">
+    <div class="why-wrapper"> <!-- This is the flex or grid container -->
+
+        <!-- Left Side -->
+    <div class="why-container">
+            <div class="why-content">
+              <div class="why-image">
+                <img src="./image/byanner.jpeg" alt="Australia" class="why-img">
+              </div> 
+                <h2 class="why-title">Wiseway: Your Trusted Path to Global Education.</h2>
+
+                                <p class="why-paragraph">
+                                  At Wiseway International, we are more than just an educational consultancy—we are your trusted partners in turning study abroad dreams into reality. With over 7 years of excellence in international education counseling, we have built a strong foundation based on trust, integrity, and results. Here’s why thousands of students and families choose us every year:
+                                </p>
+
+                            <h4 class="why-titlee">🌍 Global Reach, Local Expertise</h4>
+                            <p class="why-paragraph">
+                              Wiseway International proudly maintains strong affiliations with top-tier colleges and universities across the UK, Australia, USA, and Europe. These global partnerships allow us to provide diverse academic options, scholarships, and study destinations that match your goals. Whether you’re applying for undergraduate or postgraduate programs, we guide you with clarity and care.
+                            </p>
+                            
+                            <h4 class="why-titlee">🎯 Student-Centered Approach</h4>
+                            <p class="why-paragraph">
+                              Every student is unique, and so is our approach. At Wiseway, we prioritize personalized counseling to understand your academic background, financial needs, career goals, and interests. Our expert counselors work closely with you to recommend the right courses and institutions, ensuring your journey is well-matched to your future ambitions.
+                            </p>
+        
+                            <h4 class="why-titlee">📚 Top-Class Test Preparation</h4>
+                            <p class="why-paragraph">
+                              We know that strong test scores open doors. That’s why we offer expert preparation for IELTS, TOEFL, PTE, and more. Our classes are conducted by experienced instructors using proven strategies, updated materials, and practical exercises to boost your confidence and performance.
+                            </p>
+        
+                            <h4 class="why-titlee">✅ High Visa Success Rate</h4>
+                            <p class="why-paragraph">
+                            Our success speaks for itself. Thanks to our systematic documentation, in-depth visa counseling, and interview preparation, Wiseway International has maintained a high rate of visa approvals. We work tirelessly to ensure that every application is complete, convincing, and aligned with immigration guidelines.
+                            </p>
+
+                            <h4 class="why-titlee">💼 Experienced & Committed Team</h4>
+                            <p class="why-paragraph">
+                                Our team of trained and certified education counselors brings a wealth of knowledge, compassion, and professionalism to every case. We function with shared values of responsibility, transparency, and a deep commitment to student success. From your first consultation to your flight abroad, we walk with you every step of the way.
+                            </p>
+
+                            <h4 class="why-titlee">🏢 Modern Facilities and Global Offices</h4>
+                            <p class="why-paragraph">
+                                We operate from our well-equipped head office in Butwal, Nepal, with additional support from our international offices in Austin, Texas (USA) and Oak Park, VIC (Australia). This global presence ensures that students can access help before and after departure—making transitions smooth and stress-free.
+                            </p>
+
+                            <h4 class="why-titlee">🏆 Trusted by Students and Families</h4>
+                            <p class="why-paragraph">
+                                Over the years, Wiseway has helped hundreds of students achieve their goals and build successful international careers. Our long list of happy students and satisfied parents reflects our commitment to genuine service, ethical practice, and lasting impact.
+                            </p>
+
+                            <h4 class="why-titlee">✈️ We Go Beyond Admissions</h4>
+                            <p class="why-paragraph">
+                                <strong>Our services include not only university placements but also assistance with:</strong>
+                                <div class="list-why">
+                                <ul>
+                                  <li>Visa & Interview Preparation</li>
+                                  <li>Pre-Departure Briefings</li>
+                                  <li>Travel and Accommodation Support</li>
+                                  <li>Scholarship Guidance</li>
+                                  <li>Career Counseling</li>
+                                </ul>
+                                 </p>
+                            </div>
+                            <p class="why-paragraph">
+                                <strong>At Wiseway International, we believe in the power of education to transform lives. We don’t just guide applications—we build futures. If you’re ready to take the next step in your academic journey, let us help you make it a wise one.</strong>
+                               </p>
+
+
+            </div>
+      </div>
+  
+      <!-- Right Side: First-->
+      <div class="why-animation">
+        <div class="card">
+            <h3>Our International Stations</h3>
+            <p>
+                <strong>USA</strong><br>
+                <a href="tel:+1-5123128200"><i class="ri-phone-fill">  </i> +1-5123128200 </a> <br>
+                <a href="https://maps.app.goo.gl/pGEPAbgDWaF2y9fv5" ><i class="ri-map-pin-fill"> 7117 Wood Hollow Drive Austin, Texas </i></a>
+          </p>
+
+            <p><br>
+                <strong>Australia</strong><br>
+                <a href="tel:+61-0420694079"><i class="ri-phone-fill">  </i> +61-0420694079 </a><br>
+                <a href="https://maps.app.goo.gl/Jk4HMv9LNVnwg13L9" ><i class="ri-map-pin-fill">1/9 Lex Grovw Oak Park VIC3046 </i></a>
+            </p>
+
+
+          </div>
+
+        <!-- Right Side: Second -->
+        <div class="why-animation">
+            <div class="card">
+                <h3> <u>Study Abroad</u></h3>
+
+                <div class="bton">
+                  <a href="./australia.html">🇦🇺 Study In Australia</a> 
+                </div>
+
+
+                <div class="bton">
+                  <a href="./uk.html">🇬🇧   Study In UK</a> 
+                </div>
+
+                  <div class="bton">
+                  <a href="./ireland.html">🇮🇪   Study In Ireland</a>
+                  </div>
+                  
+              <div class="bton">
+                  <a href="./canada.html">🇨🇦   Study In Canada</a>
+                  </div>
+
+              <div class="bton">
+                  <a href="./usa.html">🇺🇸   Study In USA</a>
+                  </div>
+
+              <div class="bton">
+                  <a href="./newzealand.html">🇳🇿   Study In New Zealand</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Third -->
+        <div class="why-animation">
+          <div class="card">
+            <div class="image-container">
+              <a href="./ielts.html">
+              <img src="https://mymavenedu.com/wp-content/uploads/2021/05/ielts_promo.jpg" alt="Ielts Class" class="why-imge">
+              <div class="hover-message">IELTS Preparation Classes</div>  
+            </a>
+            </div>
+          </div>
+          </div>
+
+            <div class="why-animation">
+          <div class="card">
+            <div class="image-container">
+            <a href="./pte.html">
+              <img src="https://www.english.com/blog/wp-content/uploads/2020/07/studying-3.jpg" alt="PTE Class" class="why-imge">
+              <div class="hover-message">PTE Preparation Classes</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+  </section>
+  
+
+
+  <!-- // Footer Section // -->
+     
+  <footer class="footer">
+    <div class="container footer-container">
+      <!-- Newsletter -->
+
+      <div class="footer-newsletter">
+        <div class="logo">
+            <h3> <a href="https://wiseway.edu.np/" class="logo-text">
+            <img src="./image/logo.png" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        Wiseway International</h3> </a> </div>
+        <p>A trusted partner guiding students through study abroad journeys with expert advice, personalized support, and strong university connections worldwide. We make your global education dreams a reality!</p>
+      </div>
+  
+  
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">SOP</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Interview Questions</a></li>
+          <li><a href="#">Study Abroad</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+       
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p><strong>Phone:</strong> 071-592369 // +977-9709145722 </p>
+        <p><strong>Email:</strong> <a href="mailto:info@wiseway.edu.np">info@wiseway.edu.np</a></p>
+        <p><strong>Address:</strong> Butwal 11, Rupandehi, Lumbini, Nepal</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© Wiseway International. All rights reserved. | Powered By <a href="https://www.jvstudio.com.np/">J.V. Studio</a></p>
+      <p>Crafted with ❤️ by <a href="https://yubrazdhakal.com.np/"> Yubraj Dhakal Upamanyu </a></p>
+    </div>
+  </footer>
+  
+
+<!-- JavaScript -->
+<script src="./script/index.js"></script>
+
+<!-- Back to Top Button -->
+
+<button id="backToTopBtn" title="Back to Top">🛫</button>
+</body>
+</html>

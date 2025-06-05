@@ -664,6 +664,14 @@ a {
   line-height: 1.75;
 }
 
+.list-why {
+  color: #000000;
+  margin-top: 0;
+  margin-left: 40px;
+  padding-top: 0%;
+  line-height: 1.75;
+}
+
 /* Button */
 .why-button {
   background-color: #2563eb; /* blue-600 */
@@ -684,6 +692,24 @@ a {
 .why-animation {
   display: flex;
   justify-content: center;
+}
+
+.card p,
+.card a {
+  color: #032b63;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: double;
+  text-decoration-color: #1d4ed8; /* blue-700 */
+}
+
+p {
+  text-align: justify;
+}
+
+.card a:hover {
+  color: #c40000;
+  font-size: 1.2rem;
 }
 
 .why-animation lottie-player {
@@ -869,6 +895,16 @@ a {
   color: #94a3b8;
 }
 
+.footer-bottom p {
+  text-align: center;
+  color: #94a3b8;
+}
+
+.footer-bottom a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 .footer-bottom a:hover {
   color: #ef4444;
 }
@@ -940,4 +976,227 @@ a {
 
 #backToTopBtn.fly {
   animation: flyUp 0.8s forwards;
+}
+
+/* ========== CEO PAGE DESIGN ========== */
+/* Container */
+/* ==================== Layout for Main Sections ==================== */
+.main-section {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-md,
+.message-md {
+  flex: 1;
+}
+
+.image-md .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.ceo-image {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================== Message Section ==================== */
+.message-md {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  background-color: #f8f9fa;
+}
+
+.message-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+}
+
+.message-container h6 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0056b3;
+  margin-bottom: 16px;
+}
+
+.message-container p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* ==================== List Styling ==================== */
+.md-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0;
+  color: #0a1128;
+}
+
+.md-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+}
+
+.md-list li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: #00a859;
+}
+
+/* ==================== Signature ==================== */
+.signature {
+  margin-top: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: #0056b3;
+  text-align: right;
+}
+
+/* ==================== Social Media Section ==================== */
+/* === Footer inside Left Section (Image Side) === */
+.md-details {
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.md-details h3 {
+  font-style: italic;
+  font-size: 26px;
+  color: #020482;
+  margin-bottom: 10px;
+}
+
+.md-details h4 {
+  font-weight: bold;
+  font-size: 23px;
+  color: #970101;
+}
+
+.md-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* === Certifications on Left === */
+.md-certifications {
+  flex: 1;
+  min-width: 220px;
+}
+
+.md-certifications h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #0056b3;
+}
+
+.md-certifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #444;
+}
+
+.md-certifications li {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+/* === Social Links on Right === */
+.md-social {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #3b3b3b;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.social-link i {
+  font-size: 20px;
+}
+
+/* Specific platform colors */
+.social-link:nth-child(1) {
+  background-color: #3b5998;
+} /* Facebook */
+.social-link:nth-child(2) {
+  background-color: #e4405f;
+} /* Instagram */
+.social-link:nth-child(3) {
+  background-color: #0077b5;
+} /* LinkedIn */
+.social-link:nth-child(4) {
+  background-color: #000000;
+} /* TikTok */
+
+.social-link p {
+  font-size: 1rem;
+  margin: 0;
+  color: #fff;
+}
+
+.social-link:hover {
+  transform: scale(1.05);
+}
+
+.hidden-md {
+  display: inline;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .md-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .md-social {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hidden-md {
+    display: none;
+  }
 }
