@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wiseway International Consultancy</title>
+    <link rel="stylesheet" href="./Style/study.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    
+</head>
+<body>
+      <!-- 🔹 Topbar Section -->
+  <div class="topbar">
+    <div class="container">
+      <ul class="topbar-left">
+        <li><a href="mailto:info@wiseway.edu.np"> <i class="ri-mail-fill"></i> info@wiseway.edu.np</a></li>
+        <li><a href="tel:+977-071-592369"><i class="ri-phone-fill">  </i> 071-592369</a></li>
+        <!-- <li><a href="tel:+977-9709145722"> +977-9709145722</a></li> -->
+      </ul>
+      <ul class="topbar-right">
+        <li> <a href="https://wa.me/9779709145722" target="_blank"><i class="ri-whatsapp-fill"></i></a></li>
+        <li><a href="https://www.facebook.com/wisewayinternational" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="https://www.instagram.com/wisewayinternational/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+        <li><a href="https://www.tiktok.com/@wisewayinternational?fbclid=IwY2xjawKqqB9leHRuA2FlbQIxMABicmlkETFkcXdsaHVBMFdUQ1hrUHlCAR4bIBY0uS9ETPUMrcXH1cfaOpao84iRnRd1zV98EsOQOca0EmLi6vFwTb-_dw_aem_J3b7CN1GI81c-m6I7wCABg" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+      </ul>
+    </div>
+  </div>
+      
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="https://wiseway.edu.np/" class="logo-text">
+                <img src="./image/logo.png" width="30" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <span>Wiseway International</span>
+                </a>
+            </div>
+            <button id="mobile-menu-btn">☰</button>
+
+            <!-- Off-canvas Navigation Menu -->
+  <div class="nav-menu" id="navMenu">
+    <button class="close-btn" id="closeMenuBtn">✕</button>
+            
+            <div class="nav-links">
+              <a href="index.html"><button>Home</button></a>
+
+            <div class="nav-links">
+              <div class="dropdown">
+                  <button>Study Abroad</button>
+                       <div class="dropdown-content">
+                          <a href="./australia.html">🇦🇺 Study In Australia</a>
+                          <a href="./uk.html">🇬🇧 Study In UK</a>
+                          <a href="./france.html">🇫🇷 Study In France</a>
+                          <a href="./canada.html">🇨🇦 Study In Canada</a>
+                          <a href="./usa.html">🇺🇸 Study In USA</a>
+                          <a href="./newzealand.html">🇳🇿 Study In New Zealand</a>
+                          <a href="./greece.html">🇬🇷 Study In Greece</a>
+                        </div>
+      </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>About</button>
+                  <div class="dropdown-content">
+                      <a href="about.wiseway.html">About Wiseway</a>
+                      <a href="about.choose-us.html">Why Choose Us</a>
+                      <a href="about.md.html">Message From MD</a>
+                      <a href="about.team.html">Team Wiseway</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>Test Preparation</button>
+                  <div class="dropdown-content">
+                      <a href="ielts.html">IELTS Test</a>
+                      <a href="pte.html">PTE Test</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>Resources</button>
+                  <div class="dropdown-content">
+                      <a href="guidelines.html">Interview Guidelines</a>
+                      <a href="sop.aud.html">SOP For Australia</a>
+                      <a href="sop.uk.html">SOP For UK</a>
+                  </div>
+              </div>
+
+              <!-- <div class="dropdown">
+                  <button>University</button>
+                  <div class="dropdown-content">
+                      <a href="./university.australia.html">🇦🇺 Australia</a>
+                      <a href="./university.uk.html">🇬🇧  UK</a>
+                      <a href="./university.ireland.html">🇮🇪 Ireland</a>
+                      <a href="./university.canada.html">🇨🇦 Canada</a>
+                      <a href="./university.usa.html">🇺🇸  USA</a>
+                      <a href="./university.newzealand.html">🇳🇿  New Zealand</a>
+                  </div>
+              </div> -->
+
+                <a href="contact.html"><button>Contact US </button></a>
+          
+        </div>
+        </div>
+    </nav>
+
+    <!-- Message Button -->
+
+<button id="messageBtn" class="message-btn">
+    <i class="fas fa-comment-alt"></i>
+  </button>
+  
+  <!-- Appointment Form Modal -->
+   
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Book Appointment</h2>
+      <form id="appointmentForm">
+        <label for="fullName">Full Name <span class="span">*</span> </label>
+        <input type="text" id="fullName" name="fullName" required />
+  
+        <label for="email">Email <span class="span">*</span>  </label>
+        <input type="email" id="email" name="email" required />
+  
+        <label for="phone">Phone No. <span class="span">*</span>  </label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{7,15}" placeholder="Digits only with country code" />
+  
+        <label for="address">Address <span class="span">*</span>  </label>
+        <textarea id="address" name="address" rows="2" required placeholder="Country, State, District, Municipality, Ward No and Street Name too "></textarea>
+  
+        <label for="appointmentType">Appointment Type <span class="span">*</span>  </label>
+        <select id="appointmentType" name="appointmentType" required>
+          <option value="" disabled selected>Select type</option>
+          <option value="Digital Meet">Digital Meet</option>
+          <option value="Physical Meet">Physical Meet</option>
+        </select>
+  
+        <label for="appointmentTime">Appointment Time <span class="span">*</span>  </label>
+        <input type="datetime-local" id="appointmentTime" name="appointmentTime" required />
+  
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+  <section class="hero">
+
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+
+
+    <h1>Meet Our Guiding Force </h1>
+    <p class="breadcrumb"> The passionate minds behind Wiseway International - <span> committed to shaping brighter global futures.</span></p>
+  </section>
+
+
+  <div class="team-grid">
+    <!-- Team Member -->
+
+    <!-- all photo are upload in website ( https://postimg.cc/bD1B8X1c/fac1b3eb ) and (https://postimg.cc/gallery/vdm7dhq/c13052bf) -->
+        <!-- main photo link https://postimg.cc/gallery/PxnK430/57461a76 -->
+    <!-- FIRST MEMBER  -->
+    <div class="team-member">
+      <div class="flip-card">
+        <div class="card-front">
+          <img src="https://i.postimg.cc/pXGccRMY/CEO.png" alt="Member 1" />
+          <h4>Shree Ram Neupane</h4>
+          <p>CEO </p>
+        </div>
+        <div class="card-back">
+          <h5>Certified Counselor</h5>
+          <ul>
+            <li>QEAC No. 11997</li>
+            <li>British Council: 16053</li>
+            <li>IATC: 2101</li>
+            <li>USATC: 673</li>
+            <li>10+ Years Experience</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+   <!-- SECOND MEMBER  -->
+    <div class="team-member">
+      <div class="flip-card">
+        <div class="card-front">
+          <img src="https://i.postimg.cc/h48HrkGp/COO.jpg" alt="Member 2" />
+          <h4>Ram Krishna Dhakal</h4>
+          <p>Chief Operating Officer</p>
+        </div>
+        <div class="card-back">
+          <h5>Certified Trainer</h5>
+          <ul>
+            <li>British Council Certified Agent and Counselor</li>
+            <li>C.No.: 71397 </li>
+            <li>8+ Years Experience</li>
+            <!-- <li>Author & Speaker</li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- THIRD MEMBER  -->
+    <div class="team-member">
+      <div class="flip-card">
+        <div class="card-front">
+          <img src="https://i.postimg.cc/8P1xnZJD/CMO.jpg" alt="Member 2" />
+          <h4>Rajan Gyawali</h4>
+          <p>Chief Marketing Officer</p>
+        </div>
+        <div class="card-back">
+          <h5>Certified Trainer</h5>
+          <ul>
+            <li>British Council Certified Agent and Counselor</li>
+            <li>C.No.: 71620 </li>
+            <li>8+ Years Experience</li>
+            <!-- <li>Author & Speaker</li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+
+
+  <!-- FOURTH MEMBER  -->
+   <div class="team-member">
+      <div class="flip-card">
+        <div class="card-front">
+          <img src="https://i.postimg.cc/0QDhh305/BDM.jpg" alt="Member 2" />
+          <h4>Surendra Gyawali</h4>
+          <p>Business Development Manager</p>
+        </div>
+        <div class="card-back">
+         <h5>Role at Wiseway</h5>
+            <ul>
+            <li>Guiding students for overseas education</li>
+            <li>Building partnerships with universities</li>
+            <li>Driving client acquisition strategies</li>
+            <li>Expanding market reach in education sector</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIFTH MEMBER  -->
+     <div class="team-member">
+      <div class="flip-card">
+        <div class="card-front">
+          <img src="https://i.postimg.cc/5yJDJ3sB/SPM-USA.jpg" alt="Member 2" />
+          <h4>Suraj Lamichhane</h4>
+          <p>SPM, USA</p>
+        </div>
+        <div class="card-back">
+            <h5>Strategic Partnership Manager</h5>
+         <h5>Core Responsibilities</h5>
+            <ul>
+            <li>Building strategic alliances in the U.S.</li>
+            <li>Negotiating and closing high-impact deals</li>
+            <li>Driving cross-border collaborations</li>
+            <li>Expanding business networks and opportunities</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIXTH MEMBER  -->
+<div class="team-member">
+      <div class="flip-card">
+        <div class="card-front">
+          <img src="https://i.postimg.cc/Fzx8HL62/SPM-AUD.jpg" alt="Member 2" />
+          <h4>Kushal Pokharel</h4>
+          <p title="Strategic Partnership Manager">SPM, Australia</p>
+        </div>
+        <div class="card-back">
+            <h5>Strategic Partnership Manager</h5>
+          <h5>Core Responsibilities</h5>
+            <ul>
+            <li>Building partnerships in the Australian education sector</li>
+            <li>Developing strategic alliances and collaborations</li>
+            <li>Market expansion and relationship management</li>
+            <li>Driving business growth in Australia</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    
+</div>
+  <!-- // Footer Section // -->
+     
+  <footer class="footer">
+    <div class="container footer-container">
+      <!-- Newsletter -->
+
+      <div class="footer-newsletter">
+        <div class="logo">
+            <h3> <a href="https://wiseway.edu.np/" class="logo-text">
+            <img src="./image/logo.png" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        Wiseway International</h3> </a> </div>
+        <p>A trusted partner guiding students through study abroad journeys with expert advice, personalized support, and strong university connections worldwide. We make your global education dreams a reality!</p>
+      </div>
+  
+  
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">SOP</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Interview Questions</a></li>
+          <li><a href="#">Study Abroad</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+       
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p><strong>Phone:</strong> 071-592369 // +977-9709145722 </p>
+        <p><strong>Email:</strong> <a href="mailto:info@wiseway.edu.np">info@wiseway.edu.np</a></p>
+        <p><strong>Address:</strong> Butwal 11, Rupandehi, Lumbini, Nepal</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© Wiseway International. All rights reserved. | Powered By <a href="https://www.jvstudio.com.np/">J.V. Studio</a></p>
+      <p>Crafted with ❤️ by <a href="https://yubrazdhakal.com.np/"> Yubraj Dhakal Upamanyu </a></p>
+    </div>
+  </footer>
+  
+
+<!-- JavaScript -->
+<script src="./script/index.js"></script>
+
+<!-- Back to Top Button -->
+
+<button id="backToTopBtn" title="Back to Top">🛫</button>
+</body>
+</html>
