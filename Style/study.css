@@ -1445,7 +1445,6 @@ p {
 .card-back li {
   margin: 4px 0;
 }
-
 /* =================  Contact Page ================= */
 /* contact page  */
 
@@ -1650,9 +1649,36 @@ button[type="submit"]:hover {
 
 /* Responsive */
 @media (max-width: 600px) {
-  .container {
-    padding: 25px 20px;
+   .contact-header {
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column-reverse;
   }
+
+  .contact-info {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .contect-info h2{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .info-item{
+    font-size: 1.1rem;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .info-item i{
+    font-size: 1.1rem;
+  }
+  
+}
+
   input,
   select,
   textarea {
