@@ -1,7 +1,5 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $to = "info@wiseway.edu.np";
-  $subject = "New Appointment Request";
 
   $fullName = $_POST['fullName'] ?? 'Not Provided';
   $email = $_POST['email'] ?? 'Not Provided';
@@ -10,21 +8,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $appointmentType = $_POST['appointmentType'] ?? 'Not Provided';
   $appointmentTime = $_POST['appointmentTime'] ?? 'Not Provided';
 
-  $body = "Full Name: $fullName\n";
-  $body .= "Email: $email\n";
-  $body .= "Phone: $phone\n";
-  $body .= "Address: $address\n";
-  $body .= "Appointment Type: $appointmentType\n";
-  $body .= "Appointment Time: $appointmentTime\n";
+ // Datebase validation
+ $conn = new mysqli('localhost', 'wisewaye_form', 'Wise@Way#2025', 'wisewaye_form');
 
-  $headers = "From: $email";
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  } 
+} 
+else {
+  $stmt = $conn->prepare("INSERT INTO appointments (fullName, email, phone, address, appointmentType, appointmentTime) VALUES (?, ?, ?, ?, ?, ?)");
+  $stmt->bind_param("ssisss", $fullName, $email, $phone, $address, $appointmentType, $appointmentTime);
+$stmt->execute();
 
-  if (mail($to, $subject, $body, $headers)) {
-    echo "Your appointment request has been sent successfully.";
+  // Check if the appointment was booked successfully
+  if ($stmt->affected_rows > 0) {
+    echo "Appointment booked successfully!";
   } else {
-    echo "Failed to send your appointment request. Please try again.";
+    echo "Error booking appointment: " . $stmt->error;
   }
-} else {
-  echo "Invalid request.";
+
+  $stmt->close();
+  $conn->close();
 }
 ?>

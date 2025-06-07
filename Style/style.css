@@ -82,7 +82,7 @@ p {
 /* Hide menu button on desktop */
 @media (max-width: 769px) {
   .topbar a {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .topbar-left {
@@ -90,7 +90,7 @@ p {
   }
 
   .topbar-right {
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 20px;
   }
 
@@ -605,18 +605,48 @@ p {
     height: 200px;
   }
 
+  .info-box {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .box0 {
+    bottom: 27%;
+    right: -175px;
+    background-color: #0d47a1;
+  }
+
+  .box0:hover {
+    background-color: #e53935;
+  }
+
   .box1 {
     top: 20%;
-    left: 40%;
+    left: 80%;
   }
 
   .box2 {
-    top: 35%;
-    right: -50%;
+    top: 25%;
+    right: 20px;
+  }
+
+  .box3 {
+    top: 85%;
+    right: 100px;
   }
 
   .box4 {
-    left: -10%;
+    bottom: 56%;
+    left: 90px;
+  }
+  .box5 {
+    top: 50%;
+    right: -170px;
+  }
+
+  .box6 {
+    bottom: 48%;
+    left: -180px;
   }
 }
 
@@ -694,6 +724,29 @@ p {
   margin-bottom: 15px;
   line-height: 1.7;
   font-weight: 500;
+}
+
+/*==========Responsive of Welcome========== */
+@media (max-width: 768px) {
+  .welcome {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome-left,
+  .welcome-right {
+    width: 100%;
+  }
+
+  .welcome-img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .welcome-right h2 {
+    font-size: 1.8rem;
+  }
 }
 
 /*========== Message ========== */
