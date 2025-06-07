@@ -298,6 +298,7 @@ p {
   }
 
   .nav-menu .dropdown-content {
+    position: static; /* Make dropdown content relative to nav-menu */
     display: none;
     background-color: var(--space, #333);
     padding-left: 1rem;
