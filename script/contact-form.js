@@ -83,26 +83,28 @@ window.addEventListener("click", (e) => {
 });
 
 // Form submit handler
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("appointmentForm");
 
-  // Gather form data
-  const data = {
-    fullName: form.fullName.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    address: form.address.value,
-    appointmentType: form.appointmentType.value,
-    appointmentTime: form.appointmentTime.value,
-  };
-  // Display confirmation message
-  alert(
-    `Thank you ${data.fullName}! Your appointment for ${data.appointmentType} at ${data.appointmentTime} has been scheduled. We will contact you at ${data.email} or ${data.phone}.`
-  );
-  // Close modal
-  modal.style.display = "none";
-  // Reset form
-  form.reset();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch("appointment-handler.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.text())
+      .then((result) => {
+        alert(result);
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Something went wrong. Please try again.");
+      });
+  });
 });
 
 // Smooth scroll to top
