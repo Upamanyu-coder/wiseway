@@ -480,6 +480,63 @@ form select:focus {
 }
 
 /* ========== Hero Section ========== */
+
+     /* Landmarks section  */
+.success {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: linear-gradient(180deg, #1a17c1 50%, #fce4ec 100%);
+  box-shadow: #000;
+}
+
+.success h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--hover-blue);
+}
+
+.underline-red {
+  border-bottom: 3px solid #ef4444;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+.marquee-group {
+  display: flex;
+}
+
+.marquee-group .team-member {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.type {
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Hero */
 .hero {
   position: relative;
