@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wiseway International Consultancy</title>
+    <link rel="stylesheet" href="./Style/study.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    
+</head>
+<body>
+      <!-- 🔹 Topbar Section -->
+  <div class="topbar">
+    <div class="container">
+      <ul class="topbar-left">
+        <li><a href="mailto:info@wiseway.edu.np"> <i class="ri-mail-fill"></i> info@wiseway.edu.np</a></li>
+        <li><a href="tel:+977-071-592369"><i class="ri-phone-fill">  </i> 071-592369</a></li>
+        <!-- <li><a href="tel:+977-9709145722"> +977-9709145722</a></li> -->
+      </ul>
+      <ul class="topbar-right">
+        <li> <a href="https://wa.me/9779709145722" target="_blank"><i class="ri-whatsapp-fill"></i></a></li>
+        <li><a href="https://www.facebook.com/wisewayinternational" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="https://www.instagram.com/wisewayinternational/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+        <li><a href="https://www.tiktok.com/@wisewayinternational?fbclid=IwY2xjawKqqB9leHRuA2FlbQIxMABicmlkETFkcXdsaHVBMFdUQ1hrUHlCAR4bIBY0uS9ETPUMrcXH1cfaOpao84iRnRd1zV98EsOQOca0EmLi6vFwTb-_dw_aem_J3b7CN1GI81c-m6I7wCABg" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+      </ul>
+    </div>
+  </div>
+      
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="https://wiseway.edu.np/" class="logo-text">
+                <img src="./image/logo.png" width="30" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <span>Wiseway International</span>
+                </a>
+            </div>
+            <button id="mobile-menu-btn">☰</button>
+
+            <!-- Off-canvas Navigation Menu -->
+  <div class="nav-menu" id="navMenu">
+    <button class="close-btn" id="closeMenuBtn">✕</button>
+            
+            <div class="nav-links">
+              <a href="index.html"><button>Home</button></a>
+
+            <div class="nav-links">
+              <div class="dropdown">
+                  <button>Study Abroad</button>
+                       <div class="dropdown-content">
+                          <a href="./australia.html">🇦🇺 Study In Australia</a>
+                          <a href="./uk.html">🇬🇧 Study In UK</a>
+                          <a href="./france.html">🇫🇷 Study In France</a>
+                          <a href="./canada.html">🇨🇦 Study In Canada</a>
+                          <a href="./usa.html">🇺🇸 Study In USA</a>
+                          <a href="./newzealand.html">🇳🇿 Study In New Zealand</a>
+                          <a href="./greece.html">🇬🇷 Study In Greece</a>
+                        </div>
+      </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>About</button>
+                  <div class="dropdown-content">
+                      <a href="about.wiseway.html">About Wiseway</a>
+                      <a href="about.choose-us.html">Why Choose Us</a>
+                      <a href="about.md.html">Message From MD</a>
+                      <a href="about.team.html">Team Wiseway</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+                  <button>Test Preparation</button>
+                  <div class="dropdown-content">
+                      <a href="ielts.html">IELTS Test</a>
+                      <a href="pte.html">PTE Test</a>
+                  </div>
+              </div>
+
+              <div class="dropdown">
+        <button>Resources</button>
+        <div class="dropdown-content">
+          <a href="guidelines.html">Interview Guidelines</a>
+          <a href="sop.aud.html">SOP For Australia</a>
+          <a href="sop.uk.html">SOP For UK</a>
+          <a href="sop.france.html">SOP For France</a>
+          <a href="sop.canada.html">SOP For Canada</a>
+          <a href="sop.usa.html">SOP For USA</a>
+          <a href="sop.newzealand.html">SOP For New Zealand</a>
+          <a href="sop.greece.html">SOP For Greece</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button>Checklist</button>
+        <div class="dropdown-content">
+          <a href="./checklist.australia.html">Document for Australia</a>
+          <a href="./checklist.uk.html">Document for UK</a>
+          <a href="./checklist.france.html">Document for France</a>
+          <a href="./checklist.canada.html">Document for Canada</a>
+          <a href="./checklist.usa.html">Document for USA</a>
+          <a href="./checklist.newzealand.html">Document for New Zealand</a>
+          <a href="./checklist.greece.html">Document for Greece</a>
+        </div>
+
+
+                <a href="contact.html"><button>Contact US </button></a>
+          
+        </div>
+        </div>
+    </nav>
+
+    <!-- Message Button -->
+
+<button id="messageBtn" class="message-btn">
+    <i class="fas fa-comment-alt"></i>
+  </button>
+  
+  <!-- Appointment Form Modal -->
+   
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Book Appointment</h2>
+      <form id="appointmentForm">
+        <label for="fullName">Full Name <span class="span">*</span> </label>
+        <input type="text" id="fullName" name="fullName" required />
+  
+        <label for="email">Email <span class="span">*</span>  </label>
+        <input type="email" id="email" name="email" required />
+  
+        <label for="phone">Phone No. <span class="span">*</span>  </label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{7,15}" placeholder="Digits only with country code" />
+  
+        <label for="address">Address <span class="span">*</span>  </label>
+        <textarea id="address" name="address" rows="2" required placeholder="Country, State, District, Municipality, Ward No and Street Name too "></textarea>
+  
+        <label for="appointmentType">Appointment Type <span class="span">*</span>  </label>
+        <select id="appointmentType" name="appointmentType" required>
+          <option value="" disabled selected>Select type</option>
+          <option value="Digital Meet">Digital Meet</option>
+          <option value="Physical Meet">Physical Meet</option>
+        </select>
+  
+        <label for="appointmentTime">Appointment Time <span class="span">*</span>  </label>
+        <input type="datetime-local" id="appointmentTime" name="appointmentTime" required />
+  
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+  <section class="hero">
+
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+
+
+    <h1> Documents Checklist for New Zealand</h1>
+    <p class="breadcrumb"> Your Gateway to  <span>New Zealand Starts with the Right Docs.</span></p>
+  </section>
+
+  <div class="doc-container">
+    <div class="top-row">  <!-- This is the flex or grid container -->
+
+        <!-- Left Side -->
+    <!-- <div class="why-container">
+            <div class="why-content">
+              <div class="why-image">
+                <img src="https://keystoneacademic-res.cloudinary.com/image/upload/f_auto/q_auto/g_auto/c_fill/w_1280/element/11/110854_shutterstock_1037552143.jpg" alt="Australia" class="why-pic">
+              </div>  -->
+
+        <div class="one">
+            <!-- <h3 class="why-title">1. For Offer Letter</h3> -->
+                <ul class="why-paragraph">
+                   <div class="uk-doc-checklist">
+  <!-- <h2>Documents Checklists for the UK</h2> -->
+
+<h3>For Offer Letter</h3>
+<ol style="margin-left: 40px;">
+  <li>Application Form</li>
+  <li>SEE Academics (Certificate, Marksheet, and Character Certificate)</li>
+  <li>SLC Academics (Marksheet, Provisional, Migration, and Character Certificate)</li>
+  <li>Bachelor's Degree Academics (Marksheet, Provisional, Migration, Character Certificate, and Degree Completion Certificate)</li>
+  <li>English Proficiency Test Certificate</li>
+  <li>Passport</li>
+  <li>Letter of Recommendations (2 copies)</li>
+  <li>Statement of Purpose (Signed by the Student)</li>
+  <li>Updated CV</li>
+  <li>Experience Certificate (If Any)</li>
+</ol>
+<br>
+<h3>For Visa</h3>
+<ol style="margin-left: 40px;">
+  <li>Covering Letter (Word Format)</li>
+  <li>Credit Card details to pay fees online (NZD 430 ≈ NPR 21,500)
+    <ul style="margin-left: 40px;">
+      <li>Card Holder Name</li>
+      <li>Expiry Date</li>
+      <li>CVV</li>
+      <li>Card Number</li>
+    </ul>
+  </li>
+  <li>Notary attested copy of First and Last pages of Passport</li>
+  <li>Coloured scanned copy of all Passport pages (include old passports if available)</li>
+  <li>Visa Forms:
+    <ul style="margin-left: 40px;">
+      <li><a href="https://www.immigration.govt.nz/documents/forms-and-guides/inz1012.pdf" target="_blank" style="color: black;" >INZ 1012 <span style="font-size: smaller; color: blue;">(click here to download forms) </span></a></li>
+      <li><a href="https://www.immigration.govt.nz/documents/forms-and-guides/inz1226.pdf" target="_blank" style="color: black;">INZ 1226 <span style="font-size: smaller; color: blue;">(click here to download forms)</a></li>
+      <li>Supplementary Information Form</li>
+    </ul>
+  </li>
+  <li>Visa Questionnaire Form</li>
+  <li>Digital coloured photograph (45 mm x 35 mm, JPG, 381x528 pixels, 70%-80% face coverage, non-white light background)</li>
+  <li>Offer Letter from Educational Institution</li>
+  <li>Proof of Funds:
+    <ul style="margin-left: 40px;">
+      <li>Bank Statement & Certificate / Education Loan Letter</li>
+      <li>Funds = 1st year Tuition + NZ$ 20,000 (Living) + NZ$ 2,000 (Airfare)</li>
+      <li>Funds should be 3–6 months old</li>
+      <li>Collateral Documents if loan is secured</li>
+      <li>Only one sponsor is accepted</li>
+    </ul>
+  </li>
+  <li>Email ID and Visiting Card of the bank branch for verification</li>
+  <li><a href="https://www.immigration.govt.nz/documents/forms-and-guides/inz1014.pdf" target="_blank" style="color: black;">Financial Undertaking Form (INZ 1014) <span style="font-size: smaller; color: blue;">(click here to download forms)</a></li>
+  <li>Affidavit of Support from sponsors (on NPR 100 Notary Stamp Paper)</li>
+  <li>Aadhar Card, PAN Card, Passport copy of Sponsors</li>
+  <li>Income Tax Returns (ITR) or Form 16 (Last 3 years)
+    <ul style="margin-left: 40px;">
+      <li>Business Income: Provide GST registration etc.</li>
+      <li>If sponsors/parents are working abroad: Provide employment proof, salary account statement, and visa copy</li>
+    </ul>
+  </li>
+  <li>Student’s Birth Certificate (Optional)</li>
+  <li>Notary attested Academic Documents (10th, 12th, Bachelor’s — DigiLocker verified)</li>
+  <li>Visa Refusal Letter (If any)</li>
+  <li>Notary attested IELTS / PTE / TOEFL (PTE Login ID and Password if applicable)</li>
+  <li>Work Experience Documents:
+    <ul style="margin-left: 40px;">
+      <li>Experience Letter</li>
+      <li>Salary Account Statement</li>
+      <li>Form 16</li>
+      <li>ITR</li>
+    </ul>
+  </li>
+  <li><a href="https://www.immigration.govt.nz/new-zealand-visas/apply-for-a-visa/tools-and-information/tools/panel-physicians" target="_blank" style="color: black;">Medical Report <span style="font-size: smaller; color: blue;">(click here for more info) </a> (from panel doctor, not older than 3 months)</li>
+  <li>Police Clearance Certificate (not older than 6 months)</li>
+  <li>Statement of Purpose (Word format)</li>
+  <li>Updated Resume</li>
+  <li>INZ 1025 (If sponsored by someone residing in New Zealand)</li>
+  <li>Accepted Fund Types:
+    <ul style="margin-left: 40px;">
+      <li>Secured Education Loan (collateral property from nationalized bank)</li>
+      <li>Savings Account (6-month statements)</li>
+      <li>Fixed Deposit</li>
+      <li>Provident Fund (with Withdrawable Limit Certificate)</li>
+      <li>LIC Policies (Surrender Value)</li>
+    </ul>
+  </li>
+  <li>Unaccepted Fund Types:
+    <ul style="margin-left: 40px;">
+      <li>Cooperative Funds</li>
+      <li>Gold Loan / Sale of Gold</li>
+      <li>Unsecured Education Loan</li>
+      <li>Kisan Credit Card (KCC) Funds</li>
+      <li>Cash, Credit Card</li>
+      <li>Property Valuation or Documents</li>
+    </ul>
+  </li>
+  <li>Prepare using Mock Interview Questions (attached separately)</li>
+</ol>
+<br>
+<h3>Financial Requirements</h3>
+<ol style="margin-left: 40px;">
+  <li>Notary Attested Affidavit of Support from Sponsor</li>
+  <li>Max 2 Immediate Family Members as Sponsors</li>
+  <li>INZ 1014 (Financial Undertaking Form) from each sponsor</li>
+  <li>INZ 1025 (If sponsored by NZ resident)</li>
+  <li>Annual Income Proof:
+    <ul style="margin-left: 40px;">
+      <li>Salary Certificate</li>
+      <li>PAN Card</li>
+      <li>Business: Registration & PAN</li>
+      <li>Last 3 years Tax Clearance</li>
+      <li>Bank Statement</li>
+    </ul>
+  </li>
+  <li>Funds Required:
+    <ul style="margin-left: 40px;">
+      <li><strong>Course &lt; 1 year:</strong> Tuition Fee + NZ$ 15,000 Living + NZ$ 2,000 Airfare</li>
+      <li><strong>Course &gt; 1 year:</strong> 1 year Tuition + NZ$ 15,000 + NZ$ 2,000 + Payment plan showing future fund availability</li>
+    </ul>
+  </li>
+  <li>Accepted Fund Types:
+    <ul style="margin-left: 40px;">
+      <li>Secured Education Loan with Collateral (Nationalized Bank)</li>
+      <li>Savings (6 months statement)</li>
+      <li>Fixed Deposit</li>
+      <li>Provident Fund (Withdrawable Certificate)</li>
+      <li>LIC Policy (Surrender Value)</li>
+    </ul>
+  </li>
+  <li>Unaccepted Fund Types:
+    <ul style="margin-left: 40px;">
+      <li>Co-operative funds</li>
+      <li>Gold Loan / Sale of Gold</li>
+      <li>Unsecured Education Loan</li>
+      <li>KCC Funds</li>
+      <li>Cash / Credit Cards</li>
+      <li>Property Documents or Valuation</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 style="color: green; margin-top: 30px; text-align: center;">🎉 Congratulations! 🎉</h2>
+<p style="font-size: 18px; text-align: center;">You’ve completed the New Zealand Student Visa documentation process. Wishing you all the best!</p>
+
+
+</div>
+
+           
+    </div>
+</div>
+</div>
+  </section>
+  
+
+
+  <!-- // Footer Section // -->
+     
+  <footer class="footer">
+        <div class="container footer-container">
+          <!-- Newsletter -->
+
+          <div class="footer-newsletter">
+            <div class="logo">
+                <h3> <a href="https://wiseway.edu.np/" class="logo-text">
+                <img src="./image/logo.jpeg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            Wiseway International</h3> </a> </div>
+            <p>A trusted partner guiding students through study abroad journeys with expert advice, personalized support, and strong university connections worldwide. We make your global education dreams a reality!</p>
+          </div>
+      
+      
+        <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./sop.aud.html">SOP for Australia</a></li>
+          <li><a href="./sop.uk.html">SOP for UK</a></li>
+          <li><a href="./guidelines.html">Interview Guied</a></li>
+          <li><a href="./about.team.html">Wiseway Team</a></li>
+        </ul>
+      </div>
+
+      <!-- Map Address -->
+          <div class="map">
+            <h4>Our Location</h4>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1894.0931678906666!2d83.46384549762858!3d27.686748029226777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDQxJzExLjciTiA4M8KwMjcnNTQuOCJF!5e0!3m2!1sen!2snp!4v1749209440128!5m2!1sen!2snp"
+              width="100%" 
+              height="250" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Wiseway International Location">
+            </iframe>
+          </div>
+      
+          <!-- Contact Info -->
+           
+          <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <p><strong>Phone:</strong> 071-592369 <br> +977-9709145722 </p>
+            <p><strong>Email:</strong> <a href="mailto:info@wiseway.edu.np">info@wiseway.edu.np</a></p>
+            <p><strong>Address:</strong> Butwal 11, Rupandehi <br> Lumbini, Nepal</p>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>© Wiseway International. All rights reserved. | Powered By <a href="https://www.jvstudio.com.np/">J.V. Studio</a></p>
+          <p>Crafted with ❤️ by <a href="https://yubrazdhakal.com.np/"> Yubraj Dhakal Upamanyu </a></p>
+        </div>
+      </footer>
+  
+
+<!-- JavaScript -->
+<script src="./script/index.js"></script>
+
+<!-- Back to Top Button -->
+
+<button id="backToTopBtn" title="Back to Top">🛫</button>
+</body>
+</html>
