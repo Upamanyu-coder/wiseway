@@ -97,7 +97,7 @@ body {
   .topbar-right i {
     align-items: center;
     font-size: 1.2rem;
-    margin-left: 50px;
+    margin-left: 28px;
   }
 }
 /* ========== Navbar ========== */
@@ -481,7 +481,7 @@ form select:focus {
 
 /* ========== Hero Section ========== */
 
-     /* Landmarks section  */
+/* Landmarks section  */
 .success {
   padding: 60px 20px;
   text-align: center;
@@ -1706,7 +1706,7 @@ button[type="submit"]:hover {
 
 /* Responsive */
 @media (max-width: 600px) {
-   .contact-header {
+  .contact-header {
     margin-left: 0;
     margin-top: 20px;
     font-size: 1.5rem;
@@ -1719,22 +1719,20 @@ button[type="submit"]:hover {
     margin-bottom: 20px;
   }
 
-  .contect-info h2{
+  .contect-info h2 {
     font-size: 1.25rem;
     margin-bottom: 20px;
   }
 
-  .info-item{
+  .info-item {
     font-size: 1.1rem;
     margin-left: 0;
     margin-top: 10px;
   }
 
-  .info-item i{
+  .info-item i {
     font-size: 1.1rem;
   }
-  
-}
 
   input,
   select,
