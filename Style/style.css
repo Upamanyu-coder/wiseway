@@ -511,10 +511,15 @@ p {
   white-space: nowrap;
   z-index: 3;
 }
+
 .box0 {
   bottom: 5%;
   right: -30%;
   background-color: #e53935;
+}
+
+.box0:hover {
+  background-color: #0d47a1;
 }
 
 .box1 {
