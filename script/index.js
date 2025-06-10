@@ -120,25 +120,77 @@ window.addEventListener("click", (e) => {
 
 // Form submit handler
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("appointmentForm");
+  // Get references to the form and its elements
+  const appointmentForm = document.getElementById("appointmentForm");
+  const submitButton = appointmentForm.querySelector(".submit-btn");
+  const formMessage = document.getElementById("appointment-form-message");
+  const appointmentTimeInput = document.getElementById("appointmentTime");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  // Listen for the form's submit event
+  appointmentForm.addEventListener("submit", function (event) {
+    // 1. Prevent the default browser action (page reload)
+    event.preventDefault();
 
-    const formData = new FormData(form);
+    // 2. Clear any previous messages
+    formMessage.innerHTML = "";
+    formMessage.className = "";
 
+    // 3. --- Client-Side Validation ---
+    // Check if the appointment time is in the past
+    const selectedDate = new Date(appointmentTimeInput.value);
+    const now = new Date();
+
+    if (selectedDate < now) {
+      formMessage.textContent =
+        "Error: Appointment time cannot be in the past.";
+      formMessage.style.color = "red";
+      return; // Stop the submission
+    }
+
+    // Check for other required fields using the browser's built-in validation
+    if (!appointmentForm.checkValidity()) {
+      // This will trigger the browser's native error messages for required fields
+      appointmentForm.reportValidity();
+      return;
+    }
+
+    // 4. Provide instant feedback to the user
+    const originalButtonText = submitButton.textContent;
+    submitButton.textContent = "Submitting...";
+    submitButton.disabled = true;
+
+    // 5. Collect form data
+    const formData = new FormData(appointmentForm);
+
+    // 6. Send the data to the server using the Fetch API
     fetch("appointment-handler.php", {
       method: "POST",
       body: formData,
     })
-      .then((response) => response.text())
-      .then((result) => {
-        alert(result);
-        form.reset();
+      .then((response) => response.text()) // Get the plain text response from PHP
+      .then((data) => {
+        // 7. Display the server's response
+        formMessage.innerHTML = data;
+
+        // Check if the response text includes the word "Successfully"
+        if (data.includes("Successfully")) {
+          formMessage.style.color = "green";
+          appointmentForm.reset(); // Clear the form on success
+        } else {
+          formMessage.style.color = "red";
+        }
       })
       .catch((error) => {
+        // 8. Handle network errors
         console.error("Error:", error);
-        alert("Something went wrong. Please try again.");
+        formMessage.innerHTML =
+          "Sorry, a network error occurred. Please try again later.";
+        formMessage.style.color = "red";
+      })
+      .finally(() => {
+        // 9. Re-enable the button and restore its text after the request is complete
+        submitButton.textContent = originalButtonText;
+        submitButton.disabled = false;
       });
   });
 });

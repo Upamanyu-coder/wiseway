@@ -84,25 +84,77 @@ window.addEventListener("click", (e) => {
 
 // Form submit handler
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("appointmentForm");
+  // Get references to the form and its elements
+  const appointmentForm = document.getElementById("appointmentForm");
+  const submitButton = appointmentForm.querySelector(".submit-btn");
+  const formMessage = document.getElementById("appointment-form-message");
+  const appointmentTimeInput = document.getElementById("appointmentTime");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  // Listen for the form's submit event
+  appointmentForm.addEventListener("submit", function (event) {
+    // 1. Prevent the default browser action (page reload)
+    event.preventDefault();
 
-    const formData = new FormData(form);
+    // 2. Clear any previous messages
+    formMessage.innerHTML = "";
+    formMessage.className = "";
 
+    // 3. --- Client-Side Validation ---
+    // Check if the appointment time is in the past
+    const selectedDate = new Date(appointmentTimeInput.value);
+    const now = new Date();
+
+    if (selectedDate < now) {
+      formMessage.textContent =
+        "Error: Appointment time cannot be in the past.";
+      formMessage.style.color = "red";
+      return; // Stop the submission
+    }
+
+    // Check for other required fields using the browser's built-in validation
+    if (!appointmentForm.checkValidity()) {
+      // This will trigger the browser's native error messages for required fields
+      appointmentForm.reportValidity();
+      return;
+    }
+
+    // 4. Provide instant feedback to the user
+    const originalButtonText = submitButton.textContent;
+    submitButton.textContent = "Submitting...";
+    submitButton.disabled = true;
+
+    // 5. Collect form data
+    const formData = new FormData(appointmentForm);
+
+    // 6. Send the data to the server using the Fetch API
     fetch("appointment-handler.php", {
       method: "POST",
       body: formData,
     })
-      .then((response) => response.text())
-      .then((result) => {
-        alert(result);
-        form.reset();
+      .then((response) => response.text()) // Get the plain text response from PHP
+      .then((data) => {
+        // 7. Display the server's response
+        formMessage.innerHTML = data;
+
+        // Check if the response text includes the word "Successfully"
+        if (data.includes("Successfully")) {
+          formMessage.style.color = "green";
+          appointmentForm.reset(); // Clear the form on success
+        } else {
+          formMessage.style.color = "red";
+        }
       })
       .catch((error) => {
+        // 8. Handle network errors
         console.error("Error:", error);
-        alert("Something went wrong. Please try again.");
+        formMessage.innerHTML =
+          "Sorry, a network error occurred. Please try again later.";
+        formMessage.style.color = "red";
+      })
+      .finally(() => {
+        // 9. Re-enable the button and restore its text after the request is complete
+        submitButton.textContent = originalButtonText;
+        submitButton.disabled = false;
       });
   });
 });
@@ -138,25 +190,78 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("applicationForm");
+  // --- Get references to the form and its elements ---
+  const applicationForm = document.getElementById("applicationForm");
+  const submitButton = applicationForm.querySelector(".submit-btn");
+  const formMessage = document.getElementById("form-message");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  // --- References for the conditional logic ---
+  const englishTestYes = document.getElementById("englishTestYes");
+  const englishTestNo = document.getElementById("englishTestNo");
+  const institutionsSection = document.getElementById("institutionsSection");
+  const institutionsInput = document.getElementById("institutions");
 
-    const formData = new FormData(form);
+  // --- Function to toggle the visibility of the institutions field ---
+  function toggleInstitutionsSection() {
+    if (englishTestYes.checked) {
+      institutionsSection.style.display = "block";
+    } else {
+      institutionsSection.style.display = "none";
+      institutionsInput.value = ""; // Clear the input when hidden
+    }
+  }
 
+  // --- Add event listeners to radio buttons ---
+  englishTestYes.addEventListener("change", toggleInstitutionsSection);
+  englishTestNo.addEventListener("change", toggleInstitutionsSection);
+
+  // --- Run the function once on page load to set the initial state ---
+  toggleInstitutionsSection();
+
+  // --- Handle the form submission using AJAX (Fetch API) ---
+  applicationForm.addEventListener("submit", function (event) {
+    // 1. Prevent the default form submission (which causes a page reload)
+    event.preventDefault();
+
+    // 2. Provide instant feedback to the user
+    const originalButtonText = submitButton.textContent;
+    submitButton.textContent = "Submitting...";
+    submitButton.disabled = true;
+    formMessage.innerHTML = ""; // Clear previous messages
+
+    // 3. Collect all form data automatically
+    const formData = new FormData(applicationForm);
+
+    // 4. Send the data to the server using the Fetch API
     fetch("contact-form.php", {
       method: "POST",
       body: formData,
     })
-      .then((response) => response.text())
-      .then((result) => {
-        alert(result);
-        form.reset();
+      .then((response) => response.text()) // Get the response from the PHP file as text
+      .then((data) => {
+        // 5. Display the server's response
+        formMessage.innerHTML = data;
+
+        // Check if the submission was successful by looking for a keyword in the response
+        if (data.includes("Successfully")) {
+          formMessage.style.color = "green";
+          applicationForm.reset(); // Clear the form fields
+          toggleInstitutionsSection(); // Reset the conditional field visibility
+        } else {
+          formMessage.style.color = "red";
+        }
       })
       .catch((error) => {
-        console.error("Error submitting form:", error);
-        alert("Something went wrong. Please try again later.");
+        // 6. Handle network errors
+        console.error("Error:", error);
+        formMessage.innerHTML =
+          "An unexpected error occurred. Please try again later.";
+        formMessage.style.color = "red";
+      })
+      .finally(() => {
+        // 7. Re-enable the submit button regardless of success or failure
+        submitButton.textContent = originalButtonText;
+        submitButton.disabled = false;
       });
   });
 });
