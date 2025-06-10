@@ -104,25 +104,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   );
 
   // --- 5. Execute the Statement and Provide Feedback ---
-  if ($stmt->execute()) {
-    echo "<h1>Application Submitted Successfully!</h1>";
-    echo "<p>Thank you, " . htmlspecialchars($name) . ". We have received your application and will be in touch with you soon.</p>";
-    echo "<a href='javascript:history.back()'>Go Back to Form</a>";
-  } else {
-    echo "<h1>Error</h1>";
-    echo "<p>There was an error submitting your application. Please try again.</p>";
-    // For debugging, you can show the specific error:
-    // echo "Error details: " . $stmt->error;
-  }
-  
-  // --- 6. Clean Up ---
-  $stmt->close();
+   if ($stmt) {
+        $stmt->bind_param("sssssssssssssssss", 
+            $name, $email, $dob, $passport, $qualification, $college, $grade, $passYear, 
+            $marital, $address, $mobile, $guardian, $country, $englishTest, $institutions, 
+            $source, $message
+        );
+
+        // Execute and check for success or failure
+        if ($stmt->execute()) {
+            // SUCCESS: Set session variables for the success message
+            $_SESSION['form_status'] = 'success';
+            $_SESSION['user_name'] = $name;
+        } else {
+            // FAILURE: Set session variables for the error message
+            $_SESSION['form_status'] = 'error';
+            $_SESSION['form_error'] = 'Your application could not be saved. Please try again.';
+        }
+        $stmt->close();
+    } else {
+        $_SESSION['form_status'] = 'error';
+        $_SESSION['form_error'] = 'A database error occurred.';
+    }
+
+    $conn->close();
+
+    // **CRUCIAL:** Redirect back to the contact page. The browser will reload the page.
+    header('Location: contact.html');
+    exit(); // Always call exit() after a header redirect
 
 } else {
-  // If someone tries to access this PHP file directly without submitting the form.
-  echo "Invalid access. Please submit the application through the form.";
+    // If not a POST request, just go back to the form
+    header('Location: contact.html');
+    exit();
 }
-
-// Close the database connection
-$conn->close();
 ?>

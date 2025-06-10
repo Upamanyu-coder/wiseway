@@ -26,6 +26,33 @@ body {
   overflow-x: hidden;
 }
 
+/* ==================
+   Notification Popup
+   ================== */
+.notification {
+  position: fixed; /* Stays in place even when scrolling */
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  background-color: #28a745; /* Green for success */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateX(120%); /* Start off-screen */
+  transition: transform 0.4s ease-in-out;
+  z-index: 9999; /* Make sure it's on top of everything */
+}
+
+.notification.show {
+  transform: translateX(0); /* Slide in */
+}
+
+.notification.error {
+  background-color: #dc3545; /* Red for error */
+}
+
 /* ========== Topbar Styling ========== */
 .topbar {
   background-color: var(--accent-blue);
