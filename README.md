@@ -1,38 +1,63 @@
-# wiseway
 
-# Wiseway International Consultancy Website
+# WISEWAY
 
-Welcome to the official website project for **Wiseway International Consultancy**, a premier education consultancy based in Butwal, Nepal, dedicated to helping students realize their study abroad dreams with expert guidance and personalized support.
+*Empowering Global Success Through Seamless Education Journeys*
+
+![Last Commit](https://img.shields.io/badge/last%20commit-last%20tuesday-blue)
+![HTML](https://img.shields.io/badge/html-88.6%25-orange)
+![Languages](https://img.shields.io/badge/languages-4-blue)
+
+_Built with the tools and technologies:_
+
+![Markdown](https://img.shields.io/badge/-Markdown-000000?logo=markdown)
+![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?logo=javascript)
+![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php)
+
+---
+
+## Table of Contents
+
+- [Overview](#project-overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#installation--setup)
+  - [Installation](#installation--setup)
+  - [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
 ## Project Overview
 
-Wiseway International provides comprehensive study abroad consultancy services for top destinations including Australia, UK, USA, Canada, New Zealand, France, Greece, and more. The website aims to showcase their offerings, student success stories, resources, and facilitate easy communication with prospective students.
+Wiseway International Consultancy is a leading education consultancy based in Butwal, Nepal, guiding students in pursuing higher education abroad. The website highlights services, student success stories, and enables communication with prospective students.
 
 ---
 
 ## Features
 
-- **Responsive Navigation Bar:** Includes dropdown menus for Study Abroad destinations, About Us, Test Preparation, Resources, and Checklists.
-- **Topbar Contact Info & Social Links:** Email, phone numbers, and social media channels (WhatsApp, Facebook, Instagram, TikTok).
-- **Hero Section:** Engaging introduction with call-to-action buttons.
-- **Services Section:** Detailed explanation of consultancy services and benefits.
-- **Student Success Stories:** Testimonials from students who have successfully studied abroad with Wiseway's help.
-- **Appointment Booking Modal:** Allows visitors to book appointments digitally or physically.
-- **Footer:** Contains quick links, contact information, location map, and credits.
-- **SEO & Social Sharing Optimized:** Meta tags for description, Open Graph, and icons for social platforms.
+- 🌐 **Responsive Navigation Bar** with dropdown menus  
+- 📞 **Topbar** showing contact info and social media links  
+- 🎯 **Hero Section** with CTA buttons  
+- 🎓 **Services Section** that explains benefits  
+- 🧑‍🎓 **Student Success Stories** and testimonials  
+- 📅 **Appointment Booking Modal**  
+- 🦶 **Footer** with contact info, links, and maps  
+- 🚀 **SEO & Social Media Meta Tags**
 
 ---
 
 ## Technologies Used
 
-- **HTML5** for markup structure
-- **CSS3** (linked externally via `style.css`) for styling
-- **Google Fonts (Inter)** for typography
-- **Icon Libraries:** Remixicon and Font Awesome for icons
-- **Responsive design** principles for mobile and desktop compatibility
-- **JavaScript** (not included in the snippet) presumably for navigation toggling and modal functionality
+- **HTML5** – Structure
+- **CSS3** – Styling
+- **JavaScript** – Interactive elements
+- **PHP** – Backend form handling
+- **Google Fonts** – Inter
+- **Font Awesome & Remixicon** – Icons
 
 ---
 
@@ -41,28 +66,28 @@ Wiseway International provides comprehensive study abroad consultancy services f
 ```
 
 /
-├── index.html                # Main homepage
-├── about.wiseway.html        # About Wiseway page
-├── australia.html            # Study in Australia page
-├── uk.html                   # Study in UK page
-├── france.html               # Study in France page
-├── canada.html               # Study in Canada page
-├── usa.html                  # Study in USA page
-├── newzealand.html           # Study in New Zealand page
-├── greece.html               # Study in Greece page
-├── contact.html              # Contact page
-├── guidelines.html           # Interview guidelines page
-├── sop.*.html                # SOP documents for various countries
-├── checklist.*.html          # Document checklists for various countries
-├── image/                    # Folder for images like logos, students, welcome image
+├── index.html
+├── about.wiseway.html
+├── australia.html
+├── uk.html
+├── france.html
+├── canada.html
+├── usa.html
+├── newzealand.html
+├── greece.html
+├── contact.html
+├── guidelines.html
+├── sop.*.html
+├── checklist.*.html
+├── image/
 │   ├── logo.png
 │   ├── logo.jpeg
 │   ├── student.png
 │   ├── welcome.png
 │   └── ...
-├── Style/                    # CSS folder
+├── Style/
 │   └── style.css
-└── appointment-handler.php   # Backend script to handle appointment form submission
+└── appointment-handler.php
 
 ```
 
@@ -70,56 +95,57 @@ Wiseway International provides comprehensive study abroad consultancy services f
 
 ## Installation & Setup
 
-1. Clone or download the repository to your local machine.
-2. Ensure the `Style/style.css` and `image/` assets folders are correctly placed relative to `index.html`.
-3. Open `index.html` in any modern browser to view the website.
-4. To enable form submissions for the appointment form, host the site on a server that supports PHP and configure `appointment-handler.php` accordingly.
+1. 🔽 Clone or download this repository.
+2. 📁 Ensure `Style/style.css` and all images are correctly referenced.
+3. 🌐 Open `index.html` in a browser to preview.
+4. 📨 To enable the appointment form, upload to a PHP-supported server.
 
 ---
 
 ## Usage
 
-- Navigate through the top menu to explore study destinations and services.
-- Use the "Get In Touch" button to reach out via the contact page.
-- Book an appointment via the message button on the homepage.
-- Explore SOPs, interview guidelines, and document checklists under the Resources and Checklist menus.
+- 🔎 Navigate using the top menu.
+- 📧 Use the “Get In Touch” button to contact.
+- 📅 Book appointments via the homepage modal.
+- 📚 Access SOPs, guidelines, and checklists under "Resources".
 
 ---
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository, create a branch for your feature/fix, and submit a pull request with a detailed description.
+Love the project? Got ideas?  
+Fork it, branch it, push it, and PR it. Contributions are welcome!
 
 ---
 
 ## License
 
-This project is for educational and consultancy purposes. Please contact Wiseway International for commercial use permissions.
+This project is for educational and consultancy purposes only.  
+For commercial use, contact **Wiseway International**.
 
 ---
 
 ## Contact
 
 **Wiseway International Consultancy**  
-Butwal 11, Rupandehi, Lumbini, Nepal  
-Phone: 071-592369, +977-9709145722  
-Email: [info@wiseway.edu.np](mailto:info@wiseway.edu.np)  
-Website: [https://wiseway.edu.np](https://wiseway.edu.np)
+📍 Butwal 11, Rupandehi, Lumbini, Nepal  
+📞 071-592369, +977-9709145722  
+✉️ [info@wiseway.edu.np](mailto:info@wiseway.edu.np)  
+🌐 [https://wiseway.edu.np](https://wiseway.edu.np)
 
 ---
 
 ## Acknowledgements
 
-- Icons by [Remixicon](https://remixicon.com/) and [Font Awesome](https://fontawesome.com/)
-- Fonts by [Google Fonts](https://fonts.google.com/specimen/Inter)
-- Website powered by [J.V. Studio](https://www.jvstudio.com.np/)
-- Designed and developed by [Yubraj Dhakal Upamanyu](https://yubrazdhakal.com.np/)
+- 🎨 Icons by [Remixicon](https://remixicon.com/) & [Font Awesome](https://fontawesome.com/)  
+- 🔤 Fonts from [Google Fonts](https://fonts.google.com/specimen/Inter)  
+- 🛠️ Website powered by [J.V. Studio](https://www.jvstudio.com.np/)  
+- 💻 Developed by [Yubraj Dhakal Upamanyu](https://yubrazdhakal.com.np/)
 
 ---
 
 _Crafted with ❤️ for aspiring students worldwide._
 
-```
+---
 
-If you'd like, I can also help you generate README versions for GitHub or any other platform. Let me know!
-```
+[🔝 Return to Top](#wiseway)
